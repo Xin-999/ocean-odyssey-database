@@ -3,7 +3,7 @@ Databases Applied 2
 applied2_student.sql
 
 student id: 33520054
-student name: Ang Qiao Xin
+student name: Ang Qiao Xin 
 last modified date: 11 May 2025
 
 */
