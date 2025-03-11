@@ -2,9 +2,9 @@
 Databases Applied 2
 applied2_student.sql
 
-student id:
-student name:
-last modified date:
+student id: 33520054
+student name: Ang Qiao Xin
+last modified date: 11 May 2025
 
 */
 
