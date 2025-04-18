@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E82E208E-498C-704C-57BA-878CAC107E5C" name="ORDERLINE">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 02:43:05 UTC</createdTime>
+<generatorID>4D274180-1B0B-9034-8469-CE0F6243B77D</generatorID>
+<ownerDesignName>custorders</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ol_qtyordered" id="5CE7EEC8-5957-990A-318E-C1EFA647A3B4">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 02:43:05 UTC</createdTime>
+<generatorID>49F441C5-B5F1-C63E-6FFD-C13AE93DFBF6</generatorID>
+<ownerDesignName>custorders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ol_lineprice" id="4D2BF5D1-783D-B271-F544-247B07628C6A">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 02:43:05 UTC</createdTime>
+<generatorID>B9CDB9D5-EEB5-14CB-108D-FBEE90B4F0E1</generatorID>
+<ownerDesignName>custorders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="order_no" id="8DB407AA-1464-0268-16BD-37AE083BAB67">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 02:43:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[order_no]]></commentInRDBMS>
+<generatorID>D1CB54EE-1440-0A90-A104-AB7B20E11F9F</generatorID>
+<ownerDesignName>custorders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="54686598-7FE7-533C-E49E-30BFCD3F4EF2" referredColumn="84EE686A-2B23-A83B-2FF7-2C909CA9E972"/>
+</associations>
+</Column>
+<Column name="prod_no" id="99C3634F-E1E4-1552-AFBA-03CFA4273D1F">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 02:43:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[prod_no]]></commentInRDBMS>
+<generatorID>1E24F046-388D-2616-B4C2-3913FABA5B32</generatorID>
+<ownerDesignName>custorders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="07D34865-9EE5-AB7F-DB57-832E767D1A5A" referredColumn="6A1E8A29-2113-027B-6B9C-12FD9B80326E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="969B0008-B096-4E86-20D5-8154A4E7EFE7" name="ORDERLINE_PK">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 02:43:05 UTC</createdTime>
+<generatorID>4B6C0003-0536-32BB-A9FA-571DB32190EA</generatorID>
+<ownerDesignName>custorders</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="99C3634F-E1E4-1552-AFBA-03CFA4273D1F"/>
+<colUsage columnID="8DB407AA-1464-0268-16BD-37AE083BAB67"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="536A43FD-7913-435C-0F9B-3F1612AEB329" name="orders_orderline_fk">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 02:43:05 UTC</createdTime>
+<generatorID>192A8F49-32A6-3882-FB0D-218C29177309</generatorID>
+<ownerDesignName>custorders</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8DB407AA-1464-0268-16BD-37AE083BAB67"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E03C49C9-EAFE-390E-7237-86351C0E1E78" name="produce_orderline_fk">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 02:43:05 UTC</createdTime>
+<generatorID>2E9C849E-5F85-AEAF-FB63-80EA24327E77</generatorID>
+<ownerDesignName>custorders</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="99C3634F-E1E4-1552-AFBA-03CFA4273D1F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

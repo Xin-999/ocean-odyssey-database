@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="84EDE94C-912A-9F83-C7B5-451DD68EAB44" name="CUSTOMER">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 02:43:05 UTC</createdTime>
+<generatorID>277042EB-39EF-7A44-6012-AF39F1C439E2</generatorID>
+<ownerDesignName>custorders</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cust_no" id="F764A1AB-E71B-0297-050D-F97D5ADDA5B0">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 02:43:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[customer number]]></commentInRDBMS>
+<generatorID>7E936F7C-326D-053F-0572-DE09D7F12232</generatorID>
+<ownerDesignName>custorders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_name" id="19823CC0-4B46-A896-A186-1DF5330F0604">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 02:43:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[customer name]]></commentInRDBMS>
+<generatorID>237E0853-4AE2-F61E-2BF3-32149440BA57</generatorID>
+<ownerDesignName>custorders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_address" id="932DCC5C-FB12-A99C-AF07-319637B89F4E">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 02:43:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[customer address]]></commentInRDBMS>
+<generatorID>354B91B9-7612-CC26-CC3B-B1179ABFC725</generatorID>
+<ownerDesignName>custorders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_phone" id="F3E53958-FD5C-0376-A90E-100D7918A265">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 02:43:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[cust_phone]]></commentInRDBMS>
+<generatorID>8BC8E7B5-DFF6-27AF-FD8A-3E41578EA297</generatorID>
+<ownerDesignName>custorders</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_level" id="E7BADBF2-1630-3DB8-608B-E303CEE87FE3">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 02:43:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[cust_level]]></commentInRDBMS>
+<generatorID>26A723FA-AAB0-732C-1076-BFE290ACF940</generatorID>
+<ownerDesignName>custorders</ownerDesignName>
+<constraintName>chk_custlevel</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="B" description="Bronze"/>
+<valueDef value="G" description="Gold"/>
+<valueDef value="S" description="Silver"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="092D9F36-D914-A421-711F-7701503DA135" name="CUSTOMER_PK">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 02:43:05 UTC</createdTime>
+<generatorID>24F7DE69-E26B-8DA2-4F80-76B8A69984C0</generatorID>
+<ownerDesignName>custorders</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F764A1AB-E71B-0297-050D-F97D5ADDA5B0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

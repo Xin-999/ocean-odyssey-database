@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="793E1ACB-1FB0-BFC9-6553-7C6D8C20A3E5" name="PRODUCT">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 01:59:09 UTC</createdTime>
+<ownerDesignName>custorders</ownerDesignName>
+<engineerTo>
+<item key="0DED2358-56BC-F897-99D8-D0A25ABEA5A7" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="prod_no" id="3F6358CC-7B38-2BF0-7B52-C6ACF89843DE">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 01:59:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[prod_no]]></commentInRDBMS>
+<ownerDesignName>custorders</ownerDesignName>
+<engineerTo>
+<item key="0DED2358-56BC-F897-99D8-D0A25ABEA5A7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prod_desc" id="3C78740C-E746-B86C-D985-1089CD92D2A8">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 01:59:19 UTC</createdTime>
+<ownerDesignName>custorders</ownerDesignName>
+<engineerTo>
+<item key="0DED2358-56BC-F897-99D8-D0A25ABEA5A7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prod_unitprice" id="37235D18-9B53-A4DA-2DA2-EF8E3D8AD96C">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 01:59:20 UTC</createdTime>
+<ownerDesignName>custorders</ownerDesignName>
+<engineerTo>
+<item key="0DED2358-56BC-F897-99D8-D0A25ABEA5A7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,7,2</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9CD0C4C4-9978-41A6-352D-72C0254C0532" name="PRODUCT PK">
+<createdBy>user</createdBy>
+<createdTime>2025-04-08 01:59:40 UTC</createdTime>
+<ownerDesignName>custorders</ownerDesignName>
+<engineerTo>
+<item key="0DED2358-56BC-F897-99D8-D0A25ABEA5A7" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3F6358CC-7B38-2BF0-7B52-C6ACF89843DE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
