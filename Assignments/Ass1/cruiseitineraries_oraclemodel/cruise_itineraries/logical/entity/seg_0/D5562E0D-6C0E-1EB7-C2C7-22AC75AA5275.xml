@@ -15,10 +15,10 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="pass_id" id="E413BBBC-001A-A153-B41C-D56F84F1FBA8">
+<Attribute name="add_id" id="D2E9E7AC-8263-45FD-542C-2F0F7EA12531">
 <createdBy>user</createdBy>
-<createdTime>2025-04-21 09:06:07 UTC</createdTime>
-<commentInRDBMS><![CDATA[passenger's identifier]]></commentInRDBMS>
+<createdTime>2025-04-21 16:13:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[Address identifier]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -32,7 +32,7 @@
 <Attribute name="add_street_no" id="B5F065E4-EC28-88C4-F42D-0AF3EF7F169A">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 09:06:33 UTC</createdTime>
-<commentInRDBMS><![CDATA[street number of address]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Street number of address]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -45,7 +45,7 @@
 <Attribute name="add_town" id="C97390D6-1318-9818-2153-FB8E18F03CF2">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 09:07:59 UTC</createdTime>
-<commentInRDBMS><![CDATA[town of address]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Town of address]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -58,7 +58,7 @@
 <Attribute name="add_postcode" id="0986C773-6F58-79A8-FAA7-BC237B9F1FF2">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 09:08:38 UTC</createdTime>
-<commentInRDBMS><![CDATA[psotcode of address]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Postcode of address]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -71,7 +71,7 @@
 <Attribute name="add_country" id="749873CC-09D2-5E42-81AE-3FDA8706FA6F">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 09:09:01 UTC</createdTime>
-<commentInRDBMS><![CDATA[country of address]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Country of address]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -92,7 +92,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>E413BBBC-001A-A153-B41C-D56F84F1FBA8</attributeRef>
+<attributeRef>D2E9E7AC-8263-45FD-542C-2F0F7EA12531</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

@@ -46,7 +46,7 @@
 <Attribute name="oper_ceo_name" id="2D22D479-370D-95BE-16D0-59FA09C2EF13">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 08:23:57 UTC</createdTime>
-<commentInRDBMS><![CDATA[name of ceo of operator]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Name of ceo of operator]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>

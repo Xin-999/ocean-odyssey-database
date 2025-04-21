@@ -46,7 +46,7 @@
 <Attribute name="ship_date_commisioned" id="B73786EA-BE27-2AAF-B7FF-202D140D1FB8">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 08:26:36 UTC</createdTime>
-<commentInRDBMS><![CDATA[date the ship was commissioned]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Date the ship was commissioned]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -60,7 +60,7 @@
 <Attribute name="ship_tonnage" id="90C40FAE-01F2-8AD1-D617-CFA461E9FE86">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 08:28:49 UTC</createdTime>
-<commentInRDBMS><![CDATA[ship's tonnage]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Ship's tonnage]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -73,7 +73,7 @@
 <Attribute name="ship_max_guest" id="8112AAEA-F03F-0472-FD5D-F71093A7BA27">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 08:39:42 UTC</createdTime>
-<commentInRDBMS><![CDATA[maximum guest of the ship]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Maximum guest of the ship]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -86,7 +86,7 @@
 <Attribute name="ship_registered_country" id="EF62A129-46C6-32D1-3A4B-5537C7D77580">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 08:39:59 UTC</createdTime>
-<commentInRDBMS><![CDATA[ship's registered country]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Ship's registered country]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>

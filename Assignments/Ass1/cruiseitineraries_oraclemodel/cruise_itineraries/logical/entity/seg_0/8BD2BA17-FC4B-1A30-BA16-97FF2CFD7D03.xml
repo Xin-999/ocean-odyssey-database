@@ -32,7 +32,7 @@
 <Attribute name="cruise_name" id="7F89906E-259C-BC6F-9293-908C3F96FCCA">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 08:42:10 UTC</createdTime>
-<commentInRDBMS><![CDATA[name of cruise]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Name of cruise]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -46,7 +46,7 @@
 <Attribute name="cruise_desc" id="0A93230A-D203-7612-E3CE-7E15A76E1DE8">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 08:43:03 UTC</createdTime>
-<commentInRDBMS><![CDATA[brief cruise description]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Brief cruise description]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -59,7 +59,7 @@
 <Attribute name="cruise_depart_datetime" id="610DDA0A-1720-FDB8-24FA-21D8E197F74A">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 08:45:14 UTC</createdTime>
-<commentInRDBMS><![CDATA[the depart date and time of cruise]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[The depart date and time of cruise]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -67,6 +67,22 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ship_id" id="DE1E323B-50D4-7452-584A-D5A0B52C331E">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 15:41:47 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ship identifier]]></commentInRDBMS>
+<generatorID>812FB7E3-FCE6-AE01-0973-3334D46615AB</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<referedAttribute>76188995-D432-593A-90AF-F6096ED1A0BF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

@@ -18,7 +18,7 @@
 <Attribute name="pass_id" id="AE30B609-DC27-2ABC-5B29-D1C666DBF5FC">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 09:03:28 UTC</createdTime>
-<commentInRDBMS><![CDATA[passenger identifier]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Passenger identifier]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -32,7 +32,7 @@
 <Attribute name="pass_fname" id="5AD6DD0E-C9FA-139D-9E30-D5A481355D16">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 09:04:21 UTC</createdTime>
-<commentInRDBMS><![CDATA[passenger's first name]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Passenger's first name]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -46,7 +46,7 @@
 <Attribute name="pass_lname" id="337D2B61-0339-C9E0-D265-17EE43051B39">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 09:04:45 UTC</createdTime>
-<commentInRDBMS><![CDATA[passenger's last name]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Passenger's last name]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -60,7 +60,7 @@
 <Attribute name="pass_gender" id="5EB0C451-5648-4701-ADF0-390C3517D91A">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 09:05:02 UTC</createdTime>
-<commentInRDBMS><![CDATA[passenger's gender]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Passenger's gender]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -73,13 +73,14 @@
 <Attribute name="pass_dob" id="4A99C8D6-890C-488A-AB51-B7141C073F81">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 09:05:34 UTC</createdTime>
-<commentInRDBMS><![CDATA[passenger's date of birth]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Passenger's date of birth]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="pass_phone" id="DDEBF7F3-93D5-D27A-0459-47D90E24D985">
@@ -95,6 +96,39 @@
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>10</dataTypeSize>
 <ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pass_id1" id="5B3B3C98-5BC6-9637-7141-C5872E018B52">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 16:08:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[Passenger identifier]]></commentInRDBMS>
+<generatorID>AB130163-10DD-72DD-C7F6-435F41D81F33</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>AE30B609-DC27-2ABC-5B29-D1C666DBF5FC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="add_id" directorySegmentName="seg_0" id="3BF33162-016C-FB8C-F044-51C672BAA25E">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 16:24:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[Address identifier]]></commentInRDBMS>
+<generatorID>40FD5132-35D8-561C-7F4C-8807CD8A5E4A</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<referedAttribute>D2E9E7AC-8263-45FD-542C-2F0F7EA12531</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
