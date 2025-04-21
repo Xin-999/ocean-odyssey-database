@@ -56,6 +56,19 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,7,2</ownDataTypeParameters>
 </Attribute>
+<Attribute name="pcat_id" id="C605C145-7695-60FE-5FAD-5F0C4228BCA5">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 04:52:07 UTC</createdTime>
+<generatorID>41C1AF18-83F4-FBCC-6FA7-BDC506047D89</generatorID>
+<ownerDesignName>custorders</ownerDesignName>
+<engineerTo>
+<item key="0DED2358-56BC-F897-99D8-D0A25ABEA5A7" value="true"/>
+</engineerTo>
+<referedAttribute>1F08D511-2093-60AE-0D50-4709234C007D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="9CD0C4C4-9978-41A6-352D-72C0254C0532" name="PRODUCT PK">
