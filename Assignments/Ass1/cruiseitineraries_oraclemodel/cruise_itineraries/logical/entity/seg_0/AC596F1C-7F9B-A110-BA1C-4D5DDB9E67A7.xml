@@ -15,33 +15,6 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="cruise_id" id="86D8F03E-D315-DAE4-D0B0-3EEE0407DE7C">
-<createdBy>user</createdBy>
-<createdTime>2025-04-21 09:01:41 UTC</createdTime>
-<commentInRDBMS><![CDATA[cruise identifier]]></commentInRDBMS>
-<ownerDesignName>cruise_itineraries</ownerDesignName>
-<engineerTo>
-<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>7</dataTypeSize>
-<ownDataTypeParameters>7,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="pass_id" id="E9804E97-CBC1-5A75-55FB-8CA468695674">
-<createdBy>user</createdBy>
-<createdTime>2025-04-21 09:01:56 UTC</createdTime>
-<commentInRDBMS><![CDATA[passenger identifier]]></commentInRDBMS>
-<ownerDesignName>cruise_itineraries</ownerDesignName>
-<engineerTo>
-<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="board_datetime" id="CEEFDEB6-3E44-AF06-C6F1-FBE9A1213CF0">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 09:02:08 UTC</createdTime>
@@ -65,10 +38,6 @@
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
 </engineerTo>
 <pk>true</pk>
-<usedAttributes>
-<attributeRef>86D8F03E-D315-DAE4-D0B0-3EEE0407DE7C</attributeRef>
-<attributeRef>E9804E97-CBC1-5A75-55FB-8CA468695674</attributeRef>
-</usedAttributes>
 </identifier>
 </identifiers>
 </Entity>

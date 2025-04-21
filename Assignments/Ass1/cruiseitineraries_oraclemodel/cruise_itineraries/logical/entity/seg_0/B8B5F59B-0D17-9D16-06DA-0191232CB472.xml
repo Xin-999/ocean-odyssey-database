@@ -96,6 +96,22 @@
 <logicalDatatype>LOGDT025</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="oper_id" id="247DBC5E-46BB-E03B-87EE-439DB19CB57A">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 14:38:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[Operator ID identifier]]></commentInRDBMS>
+<generatorID>600734BB-AF29-28FA-6EBB-F997823B1B93</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<referedAttribute>7264359D-CF11-A28D-CB49-EA76F5D31F10</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="8CC607B7-6AD1-C1C6-7E33-1A712A429B7C" name="SHIP PK">
