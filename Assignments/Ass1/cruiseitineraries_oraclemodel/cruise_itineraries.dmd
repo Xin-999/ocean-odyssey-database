@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="cruise_itineraries" id="FAE7FFE3-5F0E-46CA-8966-80552EB1860F" version="3.5">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 05:49:26 UTC</createdTime>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>FAE7FFE3-5F0E-46CA-8966-80552EB1860F</designId>
+</OSDM_Design>
