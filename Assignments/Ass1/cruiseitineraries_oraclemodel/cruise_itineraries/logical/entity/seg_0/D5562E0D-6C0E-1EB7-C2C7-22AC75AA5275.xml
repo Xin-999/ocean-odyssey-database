@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D5562E0D-6C0E-1EB7-C2C7-22AC75AA5275" name="ADDRESS">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:05:58 UTC</createdTime>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="pass_id" id="E413BBBC-001A-A153-B41C-D56F84F1FBA8">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:06:07 UTC</createdTime>
+<commentInRDBMS><![CDATA[passenger's identifier]]></commentInRDBMS>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="add_street_no" id="B5F065E4-EC28-88C4-F42D-0AF3EF7F169A">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:06:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[street number of address]]></commentInRDBMS>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="add_town" id="C97390D6-1318-9818-2153-FB8E18F03CF2">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:07:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[town of address]]></commentInRDBMS>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="add_postcode" id="0986C773-6F58-79A8-FAA7-BC237B9F1FF2">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:08:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[psotcode of address]]></commentInRDBMS>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="add_country" id="749873CC-09D2-5E42-81AE-3FDA8706FA6F">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:09:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[country of address]]></commentInRDBMS>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="368EA7FC-27E5-5393-1884-7E4DDDA774FF" name="ADDRESS PK">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:06:10 UTC</createdTime>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E413BBBC-001A-A153-B41C-D56F84F1FBA8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

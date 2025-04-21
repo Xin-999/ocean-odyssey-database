@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AC596F1C-7F9B-A110-BA1C-4D5DDB9E67A7" name="MANIFEST">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:01:31 UTC</createdTime>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cruise_id" id="86D8F03E-D315-DAE4-D0B0-3EEE0407DE7C">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:01:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[cruise identifier]]></commentInRDBMS>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pass_id" id="E9804E97-CBC1-5A75-55FB-8CA468695674">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:01:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[passenger identifier]]></commentInRDBMS>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="board_datetime" id="CEEFDEB6-3E44-AF06-C6F1-FBE9A1213CF0">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:02:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[date time when passenger first board the ship]]></commentInRDBMS>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7CEBB14F-2299-79C4-73AC-2D0F264BC2F8" name="MANIFEST PK">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:01:49 UTC</createdTime>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>86D8F03E-D315-DAE4-D0B0-3EEE0407DE7C</attributeRef>
+<attributeRef>E9804E97-CBC1-5A75-55FB-8CA468695674</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
