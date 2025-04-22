@@ -28,6 +28,22 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ship_id" id="CCEF7095-C7E8-2BC9-5E48-1A0564C9231A">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 16:07:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ship identifier]]></commentInRDBMS>
+<generatorID>25F01CBD-3778-90D2-B336-F3AEF62593CE</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<referedAttribute>76188995-D432-593A-90AF-F6096ED1A0BF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="cabin_sleep_capacity" id="3D374F3C-278B-D556-E29A-6A00862DD721">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 08:59:35 UTC</createdTime>
@@ -62,22 +78,6 @@
 </listOfValues>
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ship_id" id="CCEF7095-C7E8-2BC9-5E48-1A0564C9231A">
-<createdBy>user</createdBy>
-<createdTime>2025-04-21 16:07:29 UTC</createdTime>
-<commentInRDBMS><![CDATA[Ship identifier]]></commentInRDBMS>
-<generatorID>25F01CBD-3778-90D2-B336-F3AEF62593CE</generatorID>
-<ownerDesignName>cruise_itineraries</ownerDesignName>
-<engineerTo>
-<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
-</engineerTo>
-<referedAttribute>76188995-D432-593A-90AF-F6096ED1A0BF</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="A3DA295D-9604-AFAE-5834-18FFA2BC8C2C" name="CABIN PK">
@@ -90,6 +90,7 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>EDEB26E6-9C6A-24A5-4B06-86BD5118D1CB</attributeRef>
+<attributeRef>CCEF7095-C7E8-2BC9-5E48-1A0564C9231A</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

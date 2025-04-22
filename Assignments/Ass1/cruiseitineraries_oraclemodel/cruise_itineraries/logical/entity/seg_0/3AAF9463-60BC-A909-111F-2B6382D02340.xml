@@ -114,20 +114,64 @@
 <dataTypePrecision>7</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="add_id" directorySegmentName="seg_0" id="3BF33162-016C-FB8C-F044-51C672BAA25E">
+<Attribute name="add_street_no" directorySegmentName="seg_0" id="E68A4D64-8CD8-95BA-3D68-38FE62377B9C">
 <createdBy>user</createdBy>
-<createdTime>2025-04-21 16:24:05 UTC</createdTime>
-<commentInRDBMS><![CDATA[Address identifier]]></commentInRDBMS>
+<createdTime>2025-04-22 11:53:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[Street number of address]]></commentInRDBMS>
 <generatorID>40FD5132-35D8-561C-7F4C-8807CD8A5E4A</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
 </engineerTo>
-<referedAttribute>D2E9E7AC-8263-45FD-542C-2F0F7EA12531</referedAttribute>
+<referedAttribute>B5F065E4-EC28-88C4-F42D-0AF3EF7F169A</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>7</dataTypePrecision>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="add_town" directorySegmentName="seg_0" id="F8AA99BA-5FF9-5480-A38F-EA31A6358490">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 11:53:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Town of address]]></commentInRDBMS>
+<generatorID>40FD5132-35D8-561C-7F4C-8807CD8A5E4A</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<referedAttribute>C97390D6-1318-9818-2153-FB8E18F03CF2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="add_postcode" directorySegmentName="seg_0" id="9589A104-23B7-986C-9AC2-989938FFAACA">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 11:53:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[Postcode of address]]></commentInRDBMS>
+<generatorID>40FD5132-35D8-561C-7F4C-8807CD8A5E4A</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<referedAttribute>0986C773-6F58-79A8-FAA7-BC237B9F1FF2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="add_country" directorySegmentName="seg_0" id="490CA4E0-06ED-A2DD-3F08-7CF28C9FE465">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 11:53:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Country of address]]></commentInRDBMS>
+<generatorID>40FD5132-35D8-561C-7F4C-8807CD8A5E4A</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<referedAttribute>749873CC-09D2-5E42-81AE-3FDA8706FA6F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
