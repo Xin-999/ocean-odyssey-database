@@ -18,7 +18,8 @@
 <Attribute name="pass_id" id="AE30B609-DC27-2ABC-5B29-D1C666DBF5FC">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 09:03:28 UTC</createdTime>
-<commentInRDBMS><![CDATA[Passenger identifier]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Passenger identifier
+Foreign key to another passenger acting as a guardian (only applicable for minors)]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -107,7 +108,8 @@
 <Attribute name="pass_id1" id="5B3B3C98-5BC6-9637-7141-C5872E018B52">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 16:08:25 UTC</createdTime>
-<commentInRDBMS><![CDATA[Passenger identifier]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Passenger identifier
+Foreign key to another passenger acting as a guardian (only applicable for minors)]]></commentInRDBMS>
 <generatorID>AB130163-10DD-72DD-C7F6-435F41D81F33</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
