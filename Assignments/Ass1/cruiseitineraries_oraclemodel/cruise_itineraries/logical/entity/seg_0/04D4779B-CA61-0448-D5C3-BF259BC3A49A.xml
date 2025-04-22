@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="04D4779B-CA61-0448-D5C3-BF259BC3A49A" name="COUNTRY">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 12:21:13 UTC</createdTime>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="country_code" id="6017DDE0-FDDF-EBB2-72B9-B8B22BDE7273">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 12:37:07 UTC</createdTime>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="country_name" id="07360117-C2C4-FB6B-7D25-76E396567CDF">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 12:21:21 UTC</createdTime>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2A3C6164-9131-A886-C504-6A3501E37FD5" name="COUNTRY PK">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 12:37:13 UTC</createdTime>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6017DDE0-FDDF-EBB2-72B9-B8B22BDE7273</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

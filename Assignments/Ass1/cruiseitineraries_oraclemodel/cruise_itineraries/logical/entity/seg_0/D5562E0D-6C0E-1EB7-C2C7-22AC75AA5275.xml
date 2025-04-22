@@ -15,6 +15,20 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="add_id" id="CBBB39DE-ACF8-BE41-3E82-227598EBADCD">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 13:20:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[Address identifier (surrogate key)]]></commentInRDBMS>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="add_street_no" id="B5F065E4-EC28-88C4-F42D-0AF3EF7F169A">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 09:06:33 UTC</createdTime>
@@ -26,7 +40,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="add_town" id="C97390D6-1318-9818-2153-FB8E18F03CF2">
 <createdBy>user</createdBy>
@@ -38,8 +53,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="add_postcode" id="0986C773-6F58-79A8-FAA7-BC237B9F1FF2">
 <createdBy>user</createdBy>
@@ -52,7 +68,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="add_country" id="749873CC-09D2-5E42-81AE-3FDA8706FA6F">
 <createdBy>user</createdBy>
@@ -64,8 +81,9 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -77,6 +95,18 @@
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
 </engineerTo>
 <pk>true</pk>
+<usedAttributes>
+<attributeRef>CBBB39DE-ACF8-BE41-3E82-227598EBADCD</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="E94E2FE0-DA5D-FF0D-3AB4-A6026729689A" name="ADDRESS_UQ">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 13:24:54 UTC</createdTime>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<newElementsIDs>B5F065E4-EC28-88C4-F42D-0AF3EF7F169A,C97390D6-1318-9818-2153-FB8E18F03CF2,0986C773-6F58-79A8-FAA7-BC237B9F1FF2,749873CC-09D2-5E42-81AE-3FDA8706FA6F</newElementsIDs>
 <usedAttributes>
 <attributeRef>B5F065E4-EC28-88C4-F42D-0AF3EF7F169A</attributeRef>
 <attributeRef>C97390D6-1318-9818-2153-FB8E18F03CF2</attributeRef>

@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="435E22A9-7838-D765-5912-A5C6C22A7DC7" name="ITINERARY">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 12:22:06 UTC</createdTime>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cruise_id" id="03B67821-771E-A9CB-9505-18C423C9BB8F">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 12:31:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cruise identifier]]></commentInRDBMS>
+<generatorID>8938FBC5-1954-8BEA-9F20-B3459B554123</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<referedAttribute>5F4C7265-44B9-4BE2-F67C-C1B15A03F972</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="iti_depart_datetime" id="8FDFBE6D-8310-8174-F513-B92E149CB29E">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 12:22:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date time of depart or arrival]]></commentInRDBMS>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="iti_depart_type" id="04D8E094-B6BB-89F9-6181-6E5CDAF2B52B">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 12:23:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Itinerary depart or arrive ]]></commentInRDBMS>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="port_code" id="569340CA-5968-12F5-D123-AD72013998D6">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 12:33:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[Port code identifier]]></commentInRDBMS>
+<generatorID>FEC35602-AFE2-D011-9B17-83E4F62A1451</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<referedAttribute>BD319233-F8B5-D4BE-0F63-324A1092E753</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5710C37B-CC56-E222-56CD-1D76C6474EEF" name="ITINERARY PK">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 12:31:43 UTC</createdTime>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>03B67821-771E-A9CB-9505-18C423C9BB8F</attributeRef>
+<attributeRef>8FDFBE6D-8310-8174-F513-B92E149CB29E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
