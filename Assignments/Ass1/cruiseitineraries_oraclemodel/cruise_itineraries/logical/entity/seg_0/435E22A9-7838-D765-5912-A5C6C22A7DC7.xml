@@ -47,16 +47,21 @@
 <Attribute name="iti_depart_type" id="04D8E094-B6BB-89F9-6181-6E5CDAF2B52B">
 <createdBy>user</createdBy>
 <createdTime>2025-04-22 12:23:13 UTC</createdTime>
-<commentInRDBMS><![CDATA[Itinerary depart or arrive ]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Itinerary depart or arrive (A- Arrive, D-Depart)]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
 </engineerTo>
+<constraintName>chk_itinerarydepart_type</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="A" description="Arrive"/>
+<valueDef value="D" description="Depart"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="port_code" id="569340CA-5968-12F5-D123-AD72013998D6">
 <createdBy>user</createdBy>

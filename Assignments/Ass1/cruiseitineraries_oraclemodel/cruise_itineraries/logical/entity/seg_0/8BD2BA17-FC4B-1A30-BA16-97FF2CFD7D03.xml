@@ -85,6 +85,20 @@
 <dataTypePrecision>7</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="cruise_cost" id="21212701-2A54-FD2E-678A-E6CE32F2C4B7">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 14:13:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cost of cruise]]></commentInRDBMS>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="C984204C-B957-5191-EDC5-D3A59AFC0F8A" name="CRUISE PK">

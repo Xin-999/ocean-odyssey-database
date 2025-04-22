@@ -60,15 +60,22 @@
 <Attribute name="pass_gender" id="5EB0C451-5648-4701-ADF0-390C3517D91A">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 09:05:02 UTC</createdTime>
-<commentInRDBMS><![CDATA[Passenger's gender]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[Passenger's gender(F- Female,M-Male, O-Others)]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
 </engineerTo>
+<constraintName>chk_passgender</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="F" description="Female"/>
+<valueDef value="M" description="Male"/>
+<valueDef value="O" description="Others"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="pass_dob" id="4A99C8D6-890C-488A-AB51-B7141C073F81">
 <createdBy>user</createdBy>
