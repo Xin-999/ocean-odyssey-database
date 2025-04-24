@@ -83,8 +83,8 @@
 <noForegroundColor>true</noForegroundColor>
 </targetLabel>
 <points>
-<point x="148" y="639"/>
-<point x="340" y="639"/>
+<point x="186" y="600"/>
+<point x="312" y="600"/>
 </points>
 </Connector>
 <Connector class="oracle.dbtools.crest.swingui.logical.TVRelation" oid="25F01CBD-3778-90D2-B336-F3AEF62593CE" otype="Relation" vid_source="76F87737-52AC-42FF-099D-6048C3691309" vid_target="85AA4413-6A9A-BE19-BD6B-493882C28611">

@@ -76,6 +76,7 @@
 <Attribute name="country_code" id="91049D1E-8FCB-4B92-1054-C02CA447B81F">
 <createdBy>user</createdBy>
 <createdTime>2025-04-22 12:37:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[Country code act as identifier]]></commentInRDBMS>
 <generatorID>A3B7D187-146D-5DEA-A29A-93071963F92E</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
@@ -86,7 +87,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>3</dataTypeSize>
-<ownDataTypeParameters>3,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

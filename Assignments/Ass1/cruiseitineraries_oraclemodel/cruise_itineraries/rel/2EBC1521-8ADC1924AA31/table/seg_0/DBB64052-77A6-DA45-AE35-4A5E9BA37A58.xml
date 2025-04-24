@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DBB64052-77A6-DA45-AE35-4A5E9BA37A58" name="CABIN">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<generatorID>93D72253-06D1-927B-F39F-B57562FA210A</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cabin_no" id="5E494693-50A4-AC9D-B761-22853D034442">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cabin unique number identifier]]></commentInRDBMS>
+<generatorID>EDEB26E6-9C6A-24A5-4B06-86BD5118D1CB</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ship_code" id="F54345C8-42D9-B6B1-BA1F-466B10CD8B39">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ship identifier]]></commentInRDBMS>
+<generatorID>CCEF7095-C7E8-2BC9-5E48-1A0564C9231A</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EB6DBEFF-D7BD-75B9-F6D9-C4F2021F2F00" referredColumn="4B5479DF-F8F8-ED6B-5595-E5B0FB4D7BD8"/>
+</associations>
+</Column>
+<Column name="cabin_sleep_capacity" id="27883053-D757-0ED0-161C-35F0D73AD8E1">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cabin's sleeping capacity]]></commentInRDBMS>
+<generatorID>3D374F3C-278B-D556-E29A-6A00862DD721</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cabin_class" id="4ACE194E-5713-159F-D87A-E12FF99698BC">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cabin's class (I -Interior, O- Ocean view , B-Balcony, S- Suite)]]></commentInRDBMS>
+<generatorID>55428391-A504-60BF-046A-3CD6641A4EDA</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<constraintName>chk_cabinclass</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="B" description="Balcony"/>
+<valueDef value="I" description="Interior"/>
+<valueDef value="O" description="Ocean view"/>
+<valueDef value="S" description="Suite"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="36D13746-A592-CD6C-3C79-CEC5BE9534B8" name="CABIN_PK">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<generatorID>A3DA295D-9604-AFAE-5834-18FFA2BC8C2C</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5E494693-50A4-AC9D-B761-22853D034442"/>
+<colUsage columnID="F54345C8-42D9-B6B1-BA1F-466B10CD8B39"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="66F14682-AA1C-C0D7-4EF1-782C3A6EF349" name="ship_cabin_fk">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<generatorID>25F01CBD-3778-90D2-B336-F3AEF62593CE</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F54345C8-42D9-B6B1-BA1F-466B10CD8B39"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

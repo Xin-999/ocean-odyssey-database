@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9EC5D77D-E2F7-3086-060E-9300B3C78CDC" name="OPERATOR">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<generatorID>4A242ECB-89C4-F434-1D90-E7250863917C</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="oper_id" id="08507E8C-899E-6B57-867F-37A9DD478775">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[Operator ID identifier]]></commentInRDBMS>
+<generatorID>7264359D-CF11-A28D-CB49-EA76F5D31F10</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="oper_name" id="EFB94B8D-572B-58A0-84FC-F235DF5D5FB7">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[Operator's name]]></commentInRDBMS>
+<generatorID>9CFAD144-4AAA-957C-E60E-D31B603DDCDD</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="oper_ceo_name" id="6D2CC91B-9D17-8184-31C1-A3BE2A3B3C99">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of ceo of operator]]></commentInRDBMS>
+<generatorID>2D22D479-370D-95BE-16D0-59FA09C2EF13</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4F700985-0FD5-FF5B-F309-E99A8C1D2BDE" name="OPERATOR_PK">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<generatorID>D15263BC-A354-FB3C-FF65-2649242CFB7A</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="08507E8C-899E-6B57-867F-37A9DD478775"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

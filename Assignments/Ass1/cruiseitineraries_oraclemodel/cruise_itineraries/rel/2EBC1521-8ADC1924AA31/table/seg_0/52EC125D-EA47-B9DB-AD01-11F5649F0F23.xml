@@ -1,0 +1,142 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="52EC125D-EA47-B9DB-AD01-11F5649F0F23" name="MANIFEST">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<generatorID>AC596F1C-7F9B-A110-BA1C-4D5DDB9E67A7</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cruise_id" id="ED451DCE-C8DF-4804-1910-4EBA00902FBF">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cruise identifier]]></commentInRDBMS>
+<generatorID>9952FC06-11FD-3ED4-3450-92D2B5040093</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E48B6B97-6051-34AB-64F2-01FB7082264F" referredColumn="063BA9F5-DEBF-C3D3-0276-6F5C9E7F8F45"/>
+</associations>
+</Column>
+<Column name="pass_id" id="56E0CBD9-92E4-87A0-2224-355E52A149A5">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[Passenger identifier
+Foreign key to another passenger acting as a guardian (only applicable for minors and named guardian_id)]]></commentInRDBMS>
+<generatorID>1538BED9-6217-D2D2-EEED-65E2CA5EDB76</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E4798E52-C5AB-CF86-610C-BF3CC88EB750" referredColumn="4666C9E7-51D3-E33A-A94D-8CDA819D5018"/>
+</associations>
+</Column>
+<Column name="board_datetime" id="6AD31B1A-9ED9-8CE8-F2F6-06530C5FB093">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date time when passenger first board the ship]]></commentInRDBMS>
+<generatorID>CEEFDEB6-3E44-AF06-C6F1-FBE9A1213CF0</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cabin_no" id="27BA951E-B858-CFEE-180C-1A89ABEE03CE">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cabin unique number identifier]]></commentInRDBMS>
+<generatorID>520C1B16-6E83-2933-5945-2E1976598126</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1F4116F3-AF6E-6F30-5892-4DEBC7B87B5D" referredColumn="02EC7791-697C-2DB0-B890-1992FF7772D8"/>
+</associations>
+</Column>
+<Column name="ship_code" id="244A7113-7C75-E6DE-6E14-5A089F4671F0">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ship identifier]]></commentInRDBMS>
+<generatorID>6BA9739D-56B5-5709-335F-943AD3A6A188</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1F4116F3-AF6E-6F30-5892-4DEBC7B87B5D" referredColumn="B62C72A4-8CB9-224D-3500-FF1AF124A1AD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3008FCF3-1DD0-8AAA-A250-BD81E9DC5F3E" name="MANIFEST_PK">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<generatorID>7CEBB14F-2299-79C4-73AC-2D0F264BC2F8</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED451DCE-C8DF-4804-1910-4EBA00902FBF"/>
+<colUsage columnID="56E0CBD9-92E4-87A0-2224-355E52A149A5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C65523A7-992C-1EAD-0108-DC4D65DB8069" name="cabin_manifest_fk">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<generatorID>F5C1C0ED-F1B5-EACD-6BFA-365E364A9836</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="27BA951E-B858-CFEE-180C-1A89ABEE03CE"/>
+<colUsage columnID="244A7113-7C75-E6DE-6E14-5A089F4671F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0A61503E-DA9C-FE08-1733-EA1F8950E420" name="cruise_manifest_fk">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<generatorID>69D3797D-C4F4-8E9C-A275-8A5E87C2D055</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED451DCE-C8DF-4804-1910-4EBA00902FBF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C2846A73-D33A-46B3-1C5C-22D941A4BC74" name="pass_manifest_fk">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<generatorID>B10F568B-A3F4-CC56-2CB3-DBD8E0CA1239</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="56E0CBD9-92E4-87A0-2224-355E52A149A5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

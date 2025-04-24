@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4405E9FE-EF51-2A40-25DD-D2806EE51956" name="COUNTRY">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<generatorID>04D4779B-CA61-0448-D5C3-BF259BC3A49A</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="country_code" id="9CEC13FA-F6F7-EF07-8ABF-841AD84E0B55">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[Country code act as identifier]]></commentInRDBMS>
+<generatorID>6017DDE0-FDDF-EBB2-72B9-B8B22BDE7273</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="country_name" id="BD05C27B-A31B-E444-4672-AE531BD63A5E">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the country]]></commentInRDBMS>
+<generatorID>07360117-C2C4-FB6B-7D25-76E396567CDF</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F05DF8A8-0F13-4982-65FC-5F2861D66CE6" name="COUNTRY_PK">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:35:49 UTC</createdTime>
+<generatorID>2A3C6164-9131-A886-C504-6A3501E37FD5</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CEC13FA-F6F7-EF07-8ABF-841AD84E0B55"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

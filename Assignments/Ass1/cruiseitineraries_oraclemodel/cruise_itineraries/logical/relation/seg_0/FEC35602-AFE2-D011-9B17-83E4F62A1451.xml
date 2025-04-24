@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="port_itinerary" directorySegmentName="seg_0" id="FEC35602-AFE2-D011-9B17-83E4F62A1451">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="port_itinerary_fk" directorySegmentName="seg_0" id="FEC35602-AFE2-D011-9B17-83E4F62A1451">
 <createdBy>user</createdBy>
 <createdTime>2025-04-22 12:33:47 UTC</createdTime>
 <ownerDesignName>cruise_itineraries</ownerDesignName>

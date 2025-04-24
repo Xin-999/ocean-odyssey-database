@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="45E732CF-EDC1-342B-8646-2243805256EE" name="SHIP">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<generatorID>B8B5F59B-0D17-9D16-06DA-0191232CB472</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ship_code" id="4B5479DF-F8F8-ED6B-5595-E5B0FB4D7BD8">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ship identifier]]></commentInRDBMS>
+<generatorID>76188995-D432-593A-90AF-F6096ED1A0BF</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ship_name" id="E3D9F727-C77A-D9B3-2B91-38718137C45C">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of ship]]></commentInRDBMS>
+<generatorID>1C1EB6DF-F8A3-8969-6129-99E42B31DC7E</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ship_date_commisioned" id="A5A7B510-5951-D0EC-4FD5-E90222995F20">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date the ship was commissioned]]></commentInRDBMS>
+<generatorID>B73786EA-BE27-2AAF-B7FF-202D140D1FB8</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ship_tonnage" id="C661D9E3-904B-0B74-7FF9-849164F1AAA8">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ship's tonnage]]></commentInRDBMS>
+<generatorID>90C40FAE-01F2-8AD1-D617-CFA461E9FE86</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ship_max_guest" id="A348D154-B747-88BF-C678-E4334505D01D">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Maximum guest of the ship]]></commentInRDBMS>
+<generatorID>8112AAEA-F03F-0472-FD5D-F71093A7BA27</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ship_registered_country" id="03C44FDC-1774-A371-2833-3F0C57582585">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Ship's registered country]]></commentInRDBMS>
+<generatorID>EF62A129-46C6-32D1-3A4B-5537C7D77580</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="oper_id" id="A975EBB7-1266-2BC8-73D9-F59E8968224B">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[Operator ID identifier]]></commentInRDBMS>
+<generatorID>247DBC5E-46BB-E03B-87EE-439DB19CB57A</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="525B0F4A-AC00-D97F-6FB3-16E0CA8F2F33" referredColumn="7FA3B9C7-F21E-4D23-E8A6-C90E66919A96"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4E4E4095-E0A6-A543-0E62-36B096FE6AE0" name="SHIP_PK">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<generatorID>8CC607B7-6AD1-C1C6-7E33-1A712A429B7C</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4B5479DF-F8F8-ED6B-5595-E5B0FB4D7BD8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D37E4186-2040-9D80-F151-B89A5CA2172D" name="oper_ship_fk">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<generatorID>600734BB-AF29-28FA-6EBB-F997823B1B93</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A975EBB7-1266-2BC8-73D9-F59E8968224B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
