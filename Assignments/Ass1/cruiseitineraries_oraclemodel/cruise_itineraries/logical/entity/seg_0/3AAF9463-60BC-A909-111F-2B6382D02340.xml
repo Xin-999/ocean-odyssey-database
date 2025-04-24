@@ -19,7 +19,7 @@
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 09:03:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[Passenger identifier
-Foreign key to another passenger acting as a guardian (only applicable for minors)]]></commentInRDBMS>
+Foreign key to another passenger acting as a guardian (only applicable for minors and named guardian_id)]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -58,26 +58,6 @@ Foreign key to another passenger acting as a guardian (only applicable for minor
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="pass_gender" id="5EB0C451-5648-4701-ADF0-390C3517D91A">
-<createdBy>user</createdBy>
-<createdTime>2025-04-21 09:05:02 UTC</createdTime>
-<commentInRDBMS><![CDATA[Passenger's gender(F- Female,M-Male, O-Others)]]></commentInRDBMS>
-<ownerDesignName>cruise_itineraries</ownerDesignName>
-<engineerTo>
-<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
-</engineerTo>
-<constraintName>chk_passgender</constraintName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>1</dataTypeSize>
-<listOfValues>
-<valueDef value="F" description="Female"/>
-<valueDef value="M" description="Male"/>
-<valueDef value="O" description="Others"/>
-</listOfValues>
-<ownDataTypeParameters>1,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="pass_dob" id="4A99C8D6-890C-488A-AB51-B7141C073F81">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 09:05:34 UTC</createdTime>
@@ -94,6 +74,7 @@ Foreign key to another passenger acting as a guardian (only applicable for minor
 <Attribute name="pass_phone" id="DDEBF7F3-93D5-D27A-0459-47D90E24D985">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 09:14:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[Phone number of passenger]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -101,15 +82,15 @@ Foreign key to another passenger acting as a guardian (only applicable for minor
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="pass_id1" id="5B3B3C98-5BC6-9637-7141-C5872E018B52">
+<Attribute name="guardian_id" id="5B3B3C98-5BC6-9637-7141-C5872E018B52">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 16:08:25 UTC</createdTime>
 <commentInRDBMS><![CDATA[Passenger identifier
-Foreign key to another passenger acting as a guardian (only applicable for minors)]]></commentInRDBMS>
+Foreign key to another passenger acting as a guardian (only applicable for minors and named guardian_id)]]></commentInRDBMS>
 <generatorID>AB130163-10DD-72DD-C7F6-435F41D81F33</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
@@ -135,8 +116,24 @@ Foreign key to another passenger acting as a guardian (only applicable for minor
 <referedAttribute>CBBB39DE-ACF8-BE41-3E82-227598EBADCD</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="gender_id" id="31297D7A-E506-0ABB-88B5-01C311E0E5B1">
+<createdBy>user</createdBy>
+<createdTime>2025-04-24 15:34:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Gender identifier (F-Female, M-Male, N-Non-Binary, T-Transgender, O-Others)]]></commentInRDBMS>
+<generatorID>09397EEF-7D54-2EA2-C040-196B047C8415</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<referedAttribute>9AC8767D-87A9-1F7E-A3E7-7AC438A0E150</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>7</dataTypeSize>
+<dataTypeSize>1</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

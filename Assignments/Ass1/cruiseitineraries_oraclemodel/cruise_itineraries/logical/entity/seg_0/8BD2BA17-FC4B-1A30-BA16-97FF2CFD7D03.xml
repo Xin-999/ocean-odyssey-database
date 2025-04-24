@@ -85,7 +85,7 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,15,2</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ship_id" id="DE1E323B-50D4-7452-584A-D5A0B52C331E">
+<Attribute name="ship_code" id="DE1E323B-50D4-7452-584A-D5A0B52C331E">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 15:41:47 UTC</createdTime>
 <commentInRDBMS><![CDATA[Ship identifier]]></commentInRDBMS>
@@ -99,7 +99,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

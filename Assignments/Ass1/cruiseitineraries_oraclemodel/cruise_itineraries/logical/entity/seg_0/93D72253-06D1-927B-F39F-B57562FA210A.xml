@@ -25,11 +25,11 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ship_id" id="CCEF7095-C7E8-2BC9-5E48-1A0564C9231A">
+<Attribute name="ship_code" id="CCEF7095-C7E8-2BC9-5E48-1A0564C9231A">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 16:07:29 UTC</createdTime>
 <commentInRDBMS><![CDATA[Ship identifier]]></commentInRDBMS>
@@ -43,7 +43,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="cabin_sleep_capacity" id="3D374F3C-278B-D556-E29A-6A00862DD721">
 <createdBy>user</createdBy>
