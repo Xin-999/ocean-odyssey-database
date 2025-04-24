@@ -18,6 +18,7 @@
 <Attribute name="country_code" id="6017DDE0-FDDF-EBB2-72B9-B8B22BDE7273">
 <createdBy>user</createdBy>
 <createdTime>2025-04-22 12:37:07 UTC</createdTime>
+<commentInRDBMS><![CDATA[Country code act as identifier]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
@@ -31,6 +32,7 @@
 <Attribute name="country_name" id="07360117-C2C4-FB6B-7D25-76E396567CDF">
 <createdBy>user</createdBy>
 <createdTime>2025-04-22 12:21:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the country]]></commentInRDBMS>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>

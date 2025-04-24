@@ -29,13 +29,13 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>4</dataTypePrecision>
-<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="pass_id" id="1538BED9-6217-D2D2-EEED-65E2CA5EDB76">
 <createdBy>user</createdBy>
 <createdTime>2025-04-21 15:42:57 UTC</createdTime>
 <commentInRDBMS><![CDATA[Passenger identifier
-Foreign key to another passenger acting as a guardian (only applicable for minors)]]></commentInRDBMS>
+Foreign key to another passenger acting as a guardian (only applicable for minors and named guardian_id)]]></commentInRDBMS>
 <generatorID>B10F568B-A3F4-CC56-2CB3-DBD8E0CA1239</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <engineerTo>
@@ -46,7 +46,7 @@ Foreign key to another passenger acting as a guardian (only applicable for minor
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="board_datetime" id="CEEFDEB6-3E44-AF06-C6F1-FBE9A1213CF0">
 <createdBy>user</createdBy>
