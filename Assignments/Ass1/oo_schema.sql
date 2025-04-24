@@ -4,7 +4,7 @@
 --   type:      Oracle Database 12c
 
 set echo on
-SPOOL cruiseitineraries_schema_output.txt
+SPOOL oo_schema_output.txt
 
 --student id: 33520054
 --student name: Ang Qiao Xin
