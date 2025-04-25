@@ -10,7 +10,7 @@
 <identifying>true</identifying>
 <nameOnSource>have</nameOnSource>
 <nameOnTarget> </nameOnTarget>
-<optionalSource>false</optionalSource>
+<optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>B8B5F59B-0D17-9D16-06DA-0191232CB472</sourceEntity>

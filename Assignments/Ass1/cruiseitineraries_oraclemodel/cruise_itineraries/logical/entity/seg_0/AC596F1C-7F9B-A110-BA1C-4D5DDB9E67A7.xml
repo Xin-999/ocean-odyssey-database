@@ -46,7 +46,7 @@ Foreign key to another passenger acting as a guardian (only applicable for minor
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="board_datetime" id="CEEFDEB6-3E44-AF06-C6F1-FBE9A1213CF0">
 <createdBy>user</createdBy>
@@ -56,6 +56,7 @@ Foreign key to another passenger acting as a guardian (only applicable for minor
 <engineerTo>
 <item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
