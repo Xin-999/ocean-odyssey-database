@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="51DDB0E8-100E-15EA-117A-0F15CE9006A1" name="CRUISE">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="230F8646-C386-A6E8-073E-265B73FD97EE" name="CRUISE">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <generatorID>8BD2BA17-FC4B-1A30-BA16-97FF2CFD7D03</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="cruise_id" id="0DA68066-766C-C39A-31EE-CC380F20D4C3">
+<Column name="cruise_id" id="B08379BB-7281-076E-79AE-F0124483E6F0">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <commentInRDBMS><![CDATA[Cruise identifier]]></commentInRDBMS>
 <generatorID>5F4C7265-44B9-4BE2-F67C-C1B15A03F972</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
@@ -21,9 +21,9 @@
 <ownDataTypeParameters>,4,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="cruise_name" id="0A7D4A09-A92B-598F-B7AA-5C8FA62A41A6">
+<Column name="cruise_name" id="56E8E6DF-88ED-0369-4AF8-ABDF0F040CE3">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <commentInRDBMS><![CDATA[Name of cruise]]></commentInRDBMS>
 <generatorID>7F89906E-259C-BC6F-9293-908C3F96FCCA</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
@@ -34,9 +34,9 @@
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="cruise_desc" id="E800F800-5E57-5BD4-F8C5-86A2D9F969C7">
+<Column name="cruise_desc" id="D41C39AA-4D34-9448-94CD-FAE674643281">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <commentInRDBMS><![CDATA[Brief cruise description]]></commentInRDBMS>
 <generatorID>0A93230A-D203-7612-E3CE-7E15A76E1DE8</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
@@ -47,9 +47,9 @@
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="cruise_depart_datetime" id="E7E67FB3-9E0D-FC09-EF64-5FB918102027">
+<Column name="cruise_depart_datetime" id="5F24E89C-D699-B6E6-A425-D565C0D918F6">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <commentInRDBMS><![CDATA[The depart date and time of cruise]]></commentInRDBMS>
 <generatorID>610DDA0A-1720-FDB8-24FA-21D8E197F74A</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
@@ -59,9 +59,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="cruise_cost" id="71E6DCA8-3AF1-0422-E8BE-FADD93FE67C8">
+<Column name="cruise_cost" id="45297369-EBAC-3B9B-6AB1-BBF3F590F0EA">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <commentInRDBMS><![CDATA[Cost of cruise]]></commentInRDBMS>
 <generatorID>21212701-2A54-FD2E-678A-E6CE32F2C4B7</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
@@ -73,9 +73,9 @@
 <ownDataTypeParameters>,15,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ship_code" id="A7EFD227-5AD0-7E36-4333-552FFB199D4C">
+<Column name="ship_code" id="16A08F13-227A-1D02-B68F-C046F0064D74">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <commentInRDBMS><![CDATA[Ship identifier]]></commentInRDBMS>
 <generatorID>DE1E323B-50D4-7452-584A-D5A0B52C331E</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
@@ -87,32 +87,32 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="441EE8CD-3541-459C-19C4-DD8D5C582B2A" referredColumn="4B5479DF-F8F8-ED6B-5595-E5B0FB4D7BD8"/>
+<colAssociation fkAssociation="2F517C49-D924-7A0E-485D-C978E3B632B2" referredColumn="BF147D83-986F-E076-CC66-4A9934C2C45F"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="B84FE2F1-E962-5D94-4B63-FBD7449B27B7" name="CRUISE_PK">
+<ind_PK_UK id="1FB7E572-3155-2973-B6ED-8B727465D908" name="CRUISE_PK">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <generatorID>C984204C-B957-5191-EDC5-D3A59AFC0F8A</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="0DA68066-766C-C39A-31EE-CC380F20D4C3"/>
+<colUsage columnID="B08379BB-7281-076E-79AE-F0124483E6F0"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="4DDCA952-C457-AB5C-F08D-0520A9DC6DD8" name="ship_cruise_fk">
+<ind_PK_UK id="5DCECFF9-2282-B24A-63D6-FD8E00BD2461" name="ship_cruise_fk">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <generatorID>812FB7E3-FCE6-AE01-0973-3334D46615AB</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="A7EFD227-5AD0-7E36-4333-552FFB199D4C"/>
+<colUsage columnID="16A08F13-227A-1D02-B68F-C046F0064D74"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

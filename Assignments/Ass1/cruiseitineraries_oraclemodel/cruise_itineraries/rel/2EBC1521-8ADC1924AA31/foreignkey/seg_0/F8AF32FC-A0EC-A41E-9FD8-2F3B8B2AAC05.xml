@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F8AF32FC-A0EC-A41E-9FD8-2F3B8B2AAC05" containerWithKeyObject="33232EBF-DC14-93E7-42A3-D6A41C303B9E" localFKIndex="1EDF6AB4-1A99-316B-9F7E-041C220D863F" name="passguardian_passminor_fk">
+<createdBy>user</createdBy>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
+<generatorID>AB130163-10DD-72DD-C7F6-435F41D81F33</generatorID>
+<ownerDesignName>cruise_itineraries</ownerDesignName>
+<referredTableLongName>PASSENGER</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>33232EBF-DC14-93E7-42A3-D6A41C303B9E</referredTableID>
+<keyObject>E5990F30-0AFF-7DAD-F9F2-C89E91065F16</keyObject>
+<referredKeyID>E5990F30-0AFF-7DAD-F9F2-C89E91065F16</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>pass_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

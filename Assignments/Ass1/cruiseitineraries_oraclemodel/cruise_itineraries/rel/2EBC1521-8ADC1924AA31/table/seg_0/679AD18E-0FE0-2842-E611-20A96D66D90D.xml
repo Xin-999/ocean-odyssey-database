@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9CDD6D13-F706-A3E8-A9D3-D041732455F1" name="ITINERARY">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="679AD18E-0FE0-2842-E611-20A96D66D90D" name="ITINERARY">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <generatorID>435E22A9-7838-D765-5912-A5C6C22A7DC7</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="cruise_id" id="1DE2AB57-F267-17EE-8362-1A0F2B08D59D">
+<Column name="cruise_id" id="2A9D7151-9B9B-3986-5F72-1154E3424F36">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <commentInRDBMS><![CDATA[Cruise identifier]]></commentInRDBMS>
 <generatorID>03B67821-771E-A9CB-9505-18C423C9BB8F</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
@@ -22,12 +22,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="EB3B8215-4EA4-1136-DED6-F7521B9C2213" referredColumn="0DA68066-766C-C39A-31EE-CC380F20D4C3"/>
+<colAssociation fkAssociation="A23B7CB5-DEC2-1E60-42EB-B43C41ECF522" referredColumn="B08379BB-7281-076E-79AE-F0124483E6F0"/>
 </associations>
 </Column>
-<Column name="iti_depart_datetime" id="8F20DD1A-3039-4D59-C5F1-4DF72CA503BA">
+<Column name="iti_depart_datetime" id="1E79BD4A-4E35-A839-AE7F-F95F9262C0E8">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <commentInRDBMS><![CDATA[Date time of depart or arrival]]></commentInRDBMS>
 <generatorID>8FDFBE6D-8310-8174-F513-B92E149CB29E</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
@@ -37,9 +37,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="iti_depart_type" id="95A94EC9-57A5-2F5D-DC5A-3185C6798058">
+<Column name="iti_depart_type" id="C1E8C979-FDE2-6D1B-181C-44EF09FFE659">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <commentInRDBMS><![CDATA[Itinerary depart or arrive (A- Arrive, D-Depart)]]></commentInRDBMS>
 <generatorID>04D8E094-B6BB-89F9-6181-6E5CDAF2B52B</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
@@ -55,9 +55,9 @@
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="port_code" id="A7FBC5B2-3336-05A7-6A25-2304D00D8320">
+<Column name="port_code" id="24A561D1-7E06-3977-A3C4-9B3F5FCB0FB1">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <commentInRDBMS><![CDATA[Port code identifier]]></commentInRDBMS>
 <generatorID>569340CA-5968-12F5-D123-AD72013998D6</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
@@ -69,44 +69,44 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="1F7B102C-79D4-AD94-892C-07CAD0DFA0C3" referredColumn="A3453FCC-9FBC-F9E6-1B83-7086E41EAA43"/>
+<colAssociation fkAssociation="F3E59C0A-09E6-144E-88CA-3130D9E9169A" referredColumn="9DE3BCC5-252C-DD0B-7660-745CCDC6A7C6"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="43383D1F-DAFC-72F6-F9BC-EBD473513FE3" name="ITINERARY_PK">
+<ind_PK_UK id="8A59E847-284A-8E71-6DEA-E7ADA46378DE" name="ITINERARY_PK">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <generatorID>5710C37B-CC56-E222-56CD-1D76C6474EEF</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="1DE2AB57-F267-17EE-8362-1A0F2B08D59D"/>
-<colUsage columnID="8F20DD1A-3039-4D59-C5F1-4DF72CA503BA"/>
+<colUsage columnID="2A9D7151-9B9B-3986-5F72-1154E3424F36"/>
+<colUsage columnID="1E79BD4A-4E35-A839-AE7F-F95F9262C0E8"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="43B9E6D5-260E-1B1A-0549-92F16F9DFCCB" name="cruise_itinerary_fk">
+<ind_PK_UK id="B13FDE31-F9DE-BF65-3AC7-96375C0DE854" name="cruise_itinerary_fk">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <generatorID>8938FBC5-1954-8BEA-9F20-B3459B554123</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="1DE2AB57-F267-17EE-8362-1A0F2B08D59D"/>
+<colUsage columnID="2A9D7151-9B9B-3986-5F72-1154E3424F36"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="3D59438D-1D96-B98D-894F-EB6BB2EEFC68" name="port_itinerary_fk">
+<ind_PK_UK id="560513EC-26E4-1FB3-E049-24F153047A19" name="port_itinerary_fk">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <generatorID>FEC35602-AFE2-D011-9B17-83E4F62A1451</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="A7FBC5B2-3336-05A7-6A25-2304D00D8320"/>
+<colUsage columnID="24A561D1-7E06-3977-A3C4-9B3F5FCB0FB1"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

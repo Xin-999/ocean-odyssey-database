@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FEFF7F51-58CD-E11D-CDB3-6170AA0EF0F4" name="ADDRESS">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4791D835-0076-7C41-530A-2E028AF703B8" name="ADDRESS">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <generatorID>D5562E0D-6C0E-1EB7-C2C7-22AC75AA5275</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="add_id" id="BA7516FF-0FAA-2FDB-60FE-165039873ABD">
+<Column name="add_id" id="BD3941EF-C1A8-988D-9AEC-0D6295740F39">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <commentInRDBMS><![CDATA[Address identifier (surrogate key)]]></commentInRDBMS>
 <generatorID>CBBB39DE-ACF8-BE41-3E82-227598EBADCD</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
@@ -21,9 +21,9 @@
 <ownDataTypeParameters>,7,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="add_street_no" id="10C1EF14-A14E-DF90-6F97-2008487970FD">
+<Column name="add_street_no" id="6873C5C0-C665-63D8-E913-85C5EF411222">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <commentInRDBMS><![CDATA[Street number of address]]></commentInRDBMS>
 <generatorID>B5F065E4-EC28-88C4-F42D-0AF3EF7F169A</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
@@ -34,9 +34,9 @@
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="add_town" id="2E7B4B55-78A2-0CC6-8E2D-531DEBBFAB71">
+<Column name="add_town" id="10F9AEC3-BBDA-31AC-30BE-B5DC0204B25D">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <commentInRDBMS><![CDATA[Town of address]]></commentInRDBMS>
 <generatorID>C97390D6-1318-9818-2153-FB8E18F03CF2</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
@@ -47,9 +47,9 @@
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="add_postcode" id="68EC8B22-722E-A29D-2AE2-7DD22DA64244">
+<Column name="add_postcode" id="41F1CD82-0D5C-838E-1D53-EDB81FC05FA1">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <commentInRDBMS><![CDATA[Postcode of address]]></commentInRDBMS>
 <generatorID>0986C773-6F58-79A8-FAA7-BC237B9F1FF2</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
@@ -60,9 +60,9 @@
 <ownDataTypeParameters>10,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="add_country" id="B4D8E869-032B-9364-7A33-B29F3A28BD32">
+<Column name="add_country" id="A2D094E6-FC09-A3A6-342D-A0474F260A42">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <commentInRDBMS><![CDATA[Country of address]]></commentInRDBMS>
 <generatorID>749873CC-09D2-5E42-81AE-3FDA8706FA6F</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
@@ -75,30 +75,30 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="84B0F10A-79DC-C206-7F6F-8DBE0947A34D" name="ADDRESS_PK">
+<ind_PK_UK id="A0FFB46A-CF51-7DAE-24E6-55B862E6FF35" name="ADDRESS_PK">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <generatorID>368EA7FC-27E5-5393-1884-7E4DDDA774FF</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="BA7516FF-0FAA-2FDB-60FE-165039873ABD"/>
+<colUsage columnID="BD3941EF-C1A8-988D-9AEC-0D6295740F39"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="23495D9C-32E2-BD22-77AB-A71341FA2C25" name="ADDRESS_UQ">
+<ind_PK_UK id="60CA285B-7A4E-B879-5239-B48F28153FA8" name="ADDRESS_UQ">
 <createdBy>user</createdBy>
-<createdTime>2025-04-24 16:39:29 UTC</createdTime>
+<createdTime>2025-04-25 05:24:39 UTC</createdTime>
 <generatorID>E94E2FE0-DA5D-FF0D-3AB4-A6026729689A</generatorID>
 <ownerDesignName>cruise_itineraries</ownerDesignName>
 <indexState>Unique Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="10C1EF14-A14E-DF90-6F97-2008487970FD"/>
-<colUsage columnID="2E7B4B55-78A2-0CC6-8E2D-531DEBBFAB71"/>
-<colUsage columnID="68EC8B22-722E-A29D-2AE2-7DD22DA64244"/>
-<colUsage columnID="B4D8E869-032B-9364-7A33-B29F3A28BD32"/>
+<colUsage columnID="6873C5C0-C665-63D8-E913-85C5EF411222"/>
+<colUsage columnID="10F9AEC3-BBDA-31AC-30BE-B5DC0204B25D"/>
+<colUsage columnID="41F1CD82-0D5C-838E-1D53-EDB81FC05FA1"/>
+<colUsage columnID="A2D094E6-FC09-A3A6-342D-A0474F260A42"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
