@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="country_port_fk" directorySegmentName="seg_0" id="A3B7D187-146D-5DEA-A29A-93071963F92E">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 12:37:56 UTC</createdTime>
+<ownerDesignName>oo_logical</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<sourcePk>2A3C6164-9131-A886-C504-6A3501E37FD5</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>has</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>04D4779B-CA61-0448-D5C3-BF259BC3A49A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>92B3E881-2EA2-837B-0DB5-FD61320FA0E1</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

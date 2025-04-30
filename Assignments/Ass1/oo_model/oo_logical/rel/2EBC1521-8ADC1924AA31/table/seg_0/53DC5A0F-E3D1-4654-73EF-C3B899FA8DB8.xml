@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="53DC5A0F-E3D1-4654-73EF-C3B899FA8DB8" name="OPERATOR">
+<createdBy>user</createdBy>
+<createdTime>2025-04-30 07:23:23 UTC</createdTime>
+<generatorID>4A242ECB-89C4-F434-1D90-E7250863917C</generatorID>
+<ownerDesignName>oo_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="oper_id" id="48C1BE60-7CFA-F3E8-CC28-745386F6B46A">
+<createdBy>user</createdBy>
+<createdTime>2025-04-30 07:23:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[Operator ID identifier]]></commentInRDBMS>
+<generatorID>7264359D-CF11-A28D-CB49-EA76F5D31F10</generatorID>
+<ownerDesignName>oo_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="oper_name" id="DB4DA8CF-8F24-74AA-0858-8C7CEDB564CA">
+<createdBy>user</createdBy>
+<createdTime>2025-04-30 07:23:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[Operator's name]]></commentInRDBMS>
+<generatorID>9CFAD144-4AAA-957C-E60E-D31B603DDCDD</generatorID>
+<ownerDesignName>oo_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="oper_ceo_fname" id="CB633577-14A3-0AD4-A15C-06FEE8AB076B">
+<createdBy>user</createdBy>
+<createdTime>2025-04-30 07:23:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[First name of ceo of operator]]></commentInRDBMS>
+<generatorID>2D22D479-370D-95BE-16D0-59FA09C2EF13</generatorID>
+<ownerDesignName>oo_logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="oper_ceo_lname" id="92DF1CE3-DA4C-3CE1-79D8-EAFBB26B436B">
+<createdBy>user</createdBy>
+<createdTime>2025-04-30 07:23:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[Last  name of ceo of operator]]></commentInRDBMS>
+<generatorID>96B87CC2-680C-B840-EF31-67EDAC12BDEB</generatorID>
+<ownerDesignName>oo_logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="119694CF-5959-FF6B-302D-38B4627C4207" name="OPERATOR_PK">
+<createdBy>user</createdBy>
+<createdTime>2025-04-30 07:23:23 UTC</createdTime>
+<generatorID>D15263BC-A354-FB3C-FF65-2649242CFB7A</generatorID>
+<ownerDesignName>oo_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="48C1BE60-7CFA-F3E8-CC28-745386F6B46A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

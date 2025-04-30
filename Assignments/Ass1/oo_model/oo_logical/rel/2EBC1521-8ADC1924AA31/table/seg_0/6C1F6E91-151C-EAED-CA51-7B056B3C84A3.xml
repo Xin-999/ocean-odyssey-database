@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6C1F6E91-151C-EAED-CA51-7B056B3C84A3" name="ITINERARY">
+<createdBy>user</createdBy>
+<createdTime>2025-04-30 07:23:23 UTC</createdTime>
+<generatorID>435E22A9-7838-D765-5912-A5C6C22A7DC7</generatorID>
+<ownerDesignName>oo_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="iti_datetime" id="20E59B68-4086-753A-B7FF-D86F6309E4B3">
+<createdBy>user</createdBy>
+<createdTime>2025-04-30 07:23:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date time of depart or arrival]]></commentInRDBMS>
+<generatorID>8FDFBE6D-8310-8174-F513-B92E149CB29E</generatorID>
+<ownerDesignName>oo_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cruise_id" id="7B383100-338B-2246-D10A-1A634CA8047F">
+<createdBy>user</createdBy>
+<createdTime>2025-04-30 07:23:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[Cruise identifier]]></commentInRDBMS>
+<generatorID>03B67821-771E-A9CB-9505-18C423C9BB8F</generatorID>
+<ownerDesignName>oo_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="32276368-F91D-EE2A-C59A-B72B1FFB7B11" referredColumn="430D6A74-AAF7-2958-42F3-429C1F3DFBD1"/>
+</associations>
+</Column>
+<Column name="iti_depart_type" id="539F275D-63C3-5F3E-059C-56867565ECF0">
+<createdBy>user</createdBy>
+<createdTime>2025-04-30 07:23:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[Itinerary depart or arrive (A- Arrive, D-Depart)]]></commentInRDBMS>
+<generatorID>04D8E094-B6BB-89F9-6181-6E5CDAF2B52B</generatorID>
+<ownerDesignName>oo_logical</ownerDesignName>
+<constraintName>chk_itinerarydepart_type</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="A" description="Arrive"/>
+<valueDef value="D" description="Depart"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="port_code" id="94B65B52-EB8F-A19A-0A52-77008450E08F">
+<createdBy>user</createdBy>
+<createdTime>2025-04-30 07:23:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[Port code identifier]]></commentInRDBMS>
+<generatorID>569340CA-5968-12F5-D123-AD72013998D6</generatorID>
+<ownerDesignName>oo_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A1C33C41-2378-AD9F-2E02-8EC4C95B96A0" referredColumn="2AD630BA-9CB7-DEF3-E3F7-9E8215DE84C0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BA9D0BCB-18DA-4F16-DABC-C42AA04DD764" name="ITINERARY_PK">
+<createdBy>user</createdBy>
+<createdTime>2025-04-30 07:23:23 UTC</createdTime>
+<generatorID>5710C37B-CC56-E222-56CD-1D76C6474EEF</generatorID>
+<ownerDesignName>oo_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B383100-338B-2246-D10A-1A634CA8047F"/>
+<colUsage columnID="20E59B68-4086-753A-B7FF-D86F6309E4B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BDBF77AD-9A91-F82B-B679-5C88C02D190A" name="cruise_itinerary_fk">
+<createdBy>user</createdBy>
+<createdTime>2025-04-30 07:23:23 UTC</createdTime>
+<generatorID>8938FBC5-1954-8BEA-9F20-B3459B554123</generatorID>
+<ownerDesignName>oo_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B383100-338B-2246-D10A-1A634CA8047F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3413A889-92F4-E49E-EEDC-2166C70F5D3F" name="port_itinerary_fk">
+<createdBy>user</createdBy>
+<createdTime>2025-04-30 07:23:23 UTC</createdTime>
+<generatorID>FEC35602-AFE2-D011-9B17-83E4F62A1451</generatorID>
+<ownerDesignName>oo_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="94B65B52-EB8F-A19A-0A52-77008450E08F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

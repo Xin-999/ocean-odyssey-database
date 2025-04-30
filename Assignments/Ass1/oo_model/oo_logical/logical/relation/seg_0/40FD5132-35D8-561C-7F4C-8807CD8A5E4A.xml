@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="add_pass_fk" directorySegmentName="seg_0" id="40FD5132-35D8-561C-7F4C-8807CD8A5E4A">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 16:24:04 UTC</createdTime>
+<ownerDesignName>oo_logical</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<sourcePk>368EA7FC-27E5-5393-1884-7E4DDDA774FF</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>is_residence_of</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D5562E0D-6C0E-1EB7-C2C7-22AC75AA5275</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3AAF9463-60BC-A909-111F-2B6382D02340</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

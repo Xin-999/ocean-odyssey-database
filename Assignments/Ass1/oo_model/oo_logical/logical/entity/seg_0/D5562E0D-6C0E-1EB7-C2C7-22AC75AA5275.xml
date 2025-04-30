@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D5562E0D-6C0E-1EB7-C2C7-22AC75AA5275" name="ADDRESS">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:05:58 UTC</createdTime>
+<ownerDesignName>oo_logical</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="add_id" id="CBBB39DE-ACF8-BE41-3E82-227598EBADCD">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 13:20:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[Address identifier (surrogate key)]]></commentInRDBMS>
+<ownerDesignName>oo_logical</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="add_street_no" id="B5F065E4-EC28-88C4-F42D-0AF3EF7F169A">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:06:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[Street number of address]]></commentInRDBMS>
+<ownerDesignName>oo_logical</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="add_town" id="C97390D6-1318-9818-2153-FB8E18F03CF2">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:07:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Town of address]]></commentInRDBMS>
+<ownerDesignName>oo_logical</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="add_postcode" id="0986C773-6F58-79A8-FAA7-BC237B9F1FF2">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:08:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[Postcode of address]]></commentInRDBMS>
+<ownerDesignName>oo_logical</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="country_code" id="4C1ECD75-6A41-9C2B-A804-431799716E01">
+<createdBy>user</createdBy>
+<createdTime>2025-04-30 06:55:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[Country code act as identifier]]></commentInRDBMS>
+<generatorID>1FED8514-7A51-3EFC-361A-64B98D705586</generatorID>
+<ownerDesignName>oo_logical</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<referedAttribute>6017DDE0-FDDF-EBB2-72B9-B8B22BDE7273</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="368EA7FC-27E5-5393-1884-7E4DDDA774FF" name="ADDRESS PK">
+<createdBy>user</createdBy>
+<createdTime>2025-04-21 09:06:10 UTC</createdTime>
+<ownerDesignName>oo_logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CBBB39DE-ACF8-BE41-3E82-227598EBADCD</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="E94E2FE0-DA5D-FF0D-3AB4-A6026729689A" name="ADDRESS_UQ">
+<createdBy>user</createdBy>
+<createdTime>2025-04-22 13:24:54 UTC</createdTime>
+<ownerDesignName>oo_logical</ownerDesignName>
+<engineerTo>
+<item key="2EBC1521-E661-E1B6-F56B-8ADC1924AA31" value="true"/>
+</engineerTo>
+<newElementsIDs>B5F065E4-EC28-88C4-F42D-0AF3EF7F169A,C97390D6-1318-9818-2153-FB8E18F03CF2,0986C773-6F58-79A8-FAA7-BC237B9F1FF2,1FED8514-7A51-3EFC-361A-64B98D705586</newElementsIDs>
+<usedAttributes>
+<attributeRef>B5F065E4-EC28-88C4-F42D-0AF3EF7F169A</attributeRef>
+<attributeRef>C97390D6-1318-9818-2153-FB8E18F03CF2</attributeRef>
+<attributeRef>0986C773-6F58-79A8-FAA7-BC237B9F1FF2</attributeRef>
+<attributeRef>4C1ECD75-6A41-9C2B-A804-431799716E01</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
