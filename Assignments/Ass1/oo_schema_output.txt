@@ -1,6 +1,8 @@
 SQL> 
-SQL> --student id:33520054
+SQL> --student id: 33520054
 SQL> --student name: Ang Qiao Xin
+SQL> 
+SQL> 
 SQL> DROP TABLE ADDRESS CASCADE CONSTRAINTS 
   2  ;
 
@@ -77,7 +79,7 @@ SQL> CREATE TABLE ADDRESS
   4       add_street_no VARCHAR2 (50)  NOT NULL , 
   5       add_town      VARCHAR2 (100)  NOT NULL , 
   6       add_postcode  VARCHAR2 (10)  NOT NULL , 
-  7       add_country   VARCHAR2 (50)  NOT NULL 
+  7       country_code  CHAR (3)  NOT NULL 
   8      ) 
   9  ;
 
@@ -108,7 +110,7 @@ SQL> COMMENT ON COLUMN ADDRESS.add_postcode IS 'Postcode of address'
 Comment created.
 
 SQL> 
-SQL> COMMENT ON COLUMN ADDRESS.add_country IS 'Country of address' 
+SQL> COMMENT ON COLUMN ADDRESS.country_code IS 'Country code act as identifier' 
   2  ;
 
 Comment created.
@@ -121,7 +123,7 @@ Table ADDRESS altered.
 
 SQL> 
 SQL> ALTER TABLE ADDRESS 
-  2      ADD CONSTRAINT ADDRESS_UQ UNIQUE ( add_street_no , add_town , add_postcode , add_country ) ;
+  2      ADD CONSTRAINT ADDRESS_UQ UNIQUE ( add_street_no , add_town , add_postcode , country_code ) ;
 
 Table ADDRESS altered.
 
@@ -290,10 +292,10 @@ Table GENDER altered.
 SQL> 
 SQL> CREATE TABLE ITINERARY 
   2      ( 
-  3       iti_depart_datetime DATE  NOT NULL , 
-  4       cruise_id           NUMBER (4)  NOT NULL , 
-  5       iti_depart_type     CHAR (1)  NOT NULL , 
-  6       port_code           CHAR (5)  NOT NULL 
+  3       iti_datetime    DATE  NOT NULL , 
+  4       cruise_id       NUMBER (4)  NOT NULL , 
+  5       iti_depart_type CHAR (1)  NOT NULL , 
+  6       port_code       CHAR (5)  NOT NULL 
   7      ) 
   8  ;
 
@@ -308,7 +310,7 @@ SQL> ALTER TABLE ITINERARY
 Table ITINERARY altered.
 
 SQL> 
-SQL> COMMENT ON COLUMN ITINERARY.iti_depart_datetime IS 'Date time of depart or arrival' 
+SQL> COMMENT ON COLUMN ITINERARY.iti_datetime IS 'Date time of depart or arrival' 
   2  ;
 
 Comment created.
@@ -333,7 +335,7 @@ Comment created.
 
 SQL> 
 SQL> ALTER TABLE ITINERARY 
-  2      ADD CONSTRAINT ITINERARY_PK PRIMARY KEY ( cruise_id, iti_depart_datetime ) ;
+  2      ADD CONSTRAINT ITINERARY_PK PRIMARY KEY ( cruise_id, iti_datetime ) ;
 
 Table ITINERARY altered.
 
@@ -392,8 +394,8 @@ SQL> CREATE TABLE OPERATOR
   2      ( 
   3       oper_id        NUMBER (7)  NOT NULL , 
   4       oper_name      VARCHAR2 (50)  NOT NULL , 
-  5       oper_ceo_fname VARCHAR2 (50)  NOT NULL , 
-  6       oper_ceo_lname VARCHAR2 (50)  NOT NULL 
+  5       oper_ceo_fname VARCHAR2 (50) , 
+  6       oper_ceo_lname VARCHAR2 (50) 
   7      ) 
   8  ;
 
@@ -433,8 +435,8 @@ SQL>
 SQL> CREATE TABLE PASSENGER 
   2      ( 
   3       pass_id     NUMBER (7)  NOT NULL , 
-  4       pass_fname  VARCHAR2 (50)  NOT NULL , 
-  5       pass_lname  VARCHAR2 (50)  NOT NULL , 
+  4       pass_fname  VARCHAR2 (50) , 
+  5       pass_lname  VARCHAR2 (50) , 
   6       pass_dob    DATE  NOT NULL , 
   7       pass_phone  VARCHAR2 (20) , 
   8       guardian_id NUMBER (7) , 
@@ -553,13 +555,13 @@ Table PORT altered.
 SQL> 
 SQL> CREATE TABLE SHIP 
   2      ( 
-  3       ship_code               NUMBER (7)  NOT NULL , 
-  4       ship_name               VARCHAR2 (50)  NOT NULL , 
-  5       ship_date_commisioned   DATE  NOT NULL , 
-  6       ship_tonnage            NUMBER (8,2)  NOT NULL , 
-  7       ship_max_guest          NUMBER (7)  NOT NULL , 
-  8       ship_registered_country VARCHAR2 (50)  NOT NULL , 
-  9       oper_id                 NUMBER (7)  NOT NULL 
+  3       ship_code             NUMBER (7)  NOT NULL , 
+  4       ship_name             VARCHAR2 (50)  NOT NULL , 
+  5       ship_date_commisioned DATE  NOT NULL , 
+  6       ship_tonnage          NUMBER (8,2)  NOT NULL , 
+  7       ship_max_guest        NUMBER (7)  NOT NULL , 
+  8       oper_id               NUMBER (7)  NOT NULL , 
+  9       country_code          CHAR (3)  NOT NULL 
  10      ) 
  11  ;
 
@@ -596,13 +598,13 @@ SQL> COMMENT ON COLUMN SHIP.ship_max_guest IS 'Maximum guest of the ship'
 Comment created.
 
 SQL> 
-SQL> COMMENT ON COLUMN SHIP.ship_registered_country IS 'Ship''s registered country' 
+SQL> COMMENT ON COLUMN SHIP.oper_id IS 'Operator ID identifier' 
   2  ;
 
 Comment created.
 
 SQL> 
-SQL> COMMENT ON COLUMN SHIP.oper_id IS 'Operator ID identifier' 
+SQL> COMMENT ON COLUMN SHIP.country_code IS 'Country code act as identifier' 
   2  ;
 
 Comment created.
@@ -644,6 +646,20 @@ SQL> ALTER TABLE MANIFEST
 Table MANIFEST altered.
 
 SQL> 
+SQL> ALTER TABLE ADDRESS 
+  2      ADD CONSTRAINT country_address_fk FOREIGN KEY 
+  3      ( 
+  4       country_code
+  5      ) 
+  6      REFERENCES COUNTRY 
+  7      ( 
+  8       country_code
+  9      ) 
+ 10  ;
+
+Table ADDRESS altered.
+
+SQL> 
 SQL> ALTER TABLE PORT 
   2      ADD CONSTRAINT country_port_fk FOREIGN KEY 
   3      ( 
@@ -656,6 +672,20 @@ SQL> ALTER TABLE PORT
  10  ;
 
 Table PORT altered.
+
+SQL> 
+SQL> ALTER TABLE SHIP 
+  2      ADD CONSTRAINT country_ship_fk FOREIGN KEY 
+  3      ( 
+  4       country_code
+  5      ) 
+  6      REFERENCES COUNTRY 
+  7      ( 
+  8       country_code
+  9      ) 
+ 10  ;
+
+Table SHIP altered.
 
 SQL> 
 SQL> ALTER TABLE ITINERARY 
@@ -790,7 +820,7 @@ SQL> -- Oracle SQL Developer Data Modeler Summary Report:
 SQL> -- 
 SQL> -- CREATE TABLE                            11
 SQL> -- CREATE INDEX                             0
-SQL> -- ALTER TABLE                             26
+SQL> -- ALTER TABLE                             28
 SQL> -- CREATE VIEW                              0
 SQL> -- ALTER VIEW                               0
 SQL> -- CREATE PACKAGE                           0
@@ -829,5 +859,4 @@ SQL> -- ORDS ENABLE OBJECT                       0
 SQL> -- 
 SQL> -- ERRORS                                   0
 SQL> -- WARNINGS                                 0
-SQL> 
 SQL> SPOOL OFF
