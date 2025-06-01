@@ -96,14 +96,10 @@ COMMENT ON COLUMN team.entry_no IS 'Entry number (unique only within an event)';
 ALTER TABLE team ADD CONSTRAINT team_pk PRIMARY KEY (team_id);
 ALTER TABLE team ADD CONSTRAINT team_uq UNIQUE (team_name, carn_date);
 
--- ALTER TABLE event
---     ADD CONSTRAINT carvinal_event_fk FOREIGN KEY ( carn_date )
---         REFERENCES carnival ( carn_date );
-
 -- Add all missing FK Constraints below here
 ALTER TABLE entry 
-ADD CONSTRAINT event_entry_fk FOREIGN KEY (event_id)
-    REFERENCES event (event_id);
+    ADD CONSTRAINT event_entry_fk FOREIGN KEY (event_id)
+        REFERENCES event (event_id);
 
 ALTER TABLE entry 
     ADD CONSTRAINT competitor_entry_fk FOREIGN KEY (comp_no)
