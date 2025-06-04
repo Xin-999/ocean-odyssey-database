@@ -13,17 +13,20 @@
 
 --(a)
 -- Add the new column
-ALTER TABLE competitor ADD completed_events NUMBER(3);
+ALTER TABLE competitor
+ADD num_completed_events NUMBER(3) DEFAULT 0;
+COMMENT ON COLUMN competitor.num_completed_events IS 'Number of events completed by the competitor';
 
 UPDATE competitor c
-SET completed_events = (
-    SELECT COUNT(*) FROM entry e
+SET num_completed_events = (
+    SELECT COUNT(*) 
+    FROM entry e
     WHERE e.comp_no = c.comp_no
       AND e.entry_starttime IS NOT NULL
       AND e.entry_finishtime IS NOT NULL
 );
 
-SELECT comp_no, comp_fname, comp_lname, completed_events
+SELECT comp_no, comp_fname, comp_lname, num_completed_events
 FROM competitor
 ORDER BY comp_no;
 DESC competitor;
@@ -36,13 +39,19 @@ CREATE TABLE charity_support (
     comp_no     NUMBER(4) NOT NULL,
     char_id     NUMBER(3) NOT NULL,
     carn_date   DATE NOT NULL,
-    percentage  NUMBER(3) NOT NULL CHECK (percentage BETWEEN 0 AND 100),
-
-    CONSTRAINT charity_support_pk PRIMARY KEY (comp_no, char_id, carn_date),
-    CONSTRAINT comp_fk FOREIGN KEY (comp_no) REFERENCES competitor (comp_no),
-    CONSTRAINT char_fk FOREIGN KEY (char_id) REFERENCES charity (char_id),
-    CONSTRAINT carn_fk FOREIGN KEY (carn_date) REFERENCES carnival (carn_date)
+    percentage  NUMBER(3) NOT NULL CHECK (percentage BETWEEN 0 AND 100)
 );
+
+COMMENT ON COLUMN charity_support.comp_no IS 'Competitor unique identifier';
+COMMENT ON COLUMN charity_support.char_id IS 'Charity unique identifier';
+COMMENT ON COLUMN charity_support.carn_date IS 'Carnival date for the event';
+COMMENT ON COLUMN charity_support.percentage IS 'Percentage of funds raised by the competitor for this charity';
+
+ALTER TABLE charity_support ADD CONSTRAINT charity_support_pk PRIMARY KEY (comp_no, char_id, carn_date);
+ALTER TABLE charity_support ADD CONSTRAINT comp_fk FOREIGN KEY (comp_no) REFERENCES competitor (comp_no);
+ALTER TABLE charity_support ADD CONSTRAINT char_fk FOREIGN KEY (char_id) REFERENCES charity (char_id);
+ALTER TABLE charity_support ADD CONSTRAINT carn_fk FOREIGN KEY (carn_date) REFERENCES carnival (carn_date);
+
 
 -- Insert Jackson Bull's charity support percentages
 INSERT INTO charity_support (comp_no, char_id, carn_date, percentage)
@@ -61,8 +70,14 @@ VALUES (
   30
 );
 
-SELECT * FROM charity_support
-ORDER BY comp_no, carn_date, char_id;
+-- View the data with the formatted date
+SELECT 
+    comp_no,
+    char_id,
+    TO_CHAR(carn_date, 'DD-MON-YYYY') AS carnival_date,
+    percentage
+FROM 
+    charity_support;
 
 DESC charity_support;
 
