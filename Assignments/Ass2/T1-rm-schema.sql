@@ -47,8 +47,7 @@ COMMENT ON COLUMN competitor.comp_unistatus IS 'Competitor is a university stude
 COMMENT ON COLUMN competitor.comp_phone IS 'Competitor''s phone number - unique for each competitor';
 
 ALTER TABLE competitor ADD CONSTRAINT competitor_pk PRIMARY KEY (comp_no);
-ALTER TABLE competitor ADD CONSTRAINT competitor_email_uq UNIQUE (comp_email);
-ALTER TABLE competitor ADD CONSTRAINT competitor_phone_uq UNIQUE (comp_phone);
+ALTER TABLE competitor ADD CONSTRAINT competitor_nk UNIQUE (comp_email, comp_phone);
 ALTER TABLE competitor ADD CONSTRAINT chk_comp_gender CHECK (comp_gender IN ('M', 'F', 'U'));
 ALTER TABLE competitor ADD CONSTRAINT chk_comp_unistatus CHECK (comp_unistatus IN ('Y', 'N'));
 
