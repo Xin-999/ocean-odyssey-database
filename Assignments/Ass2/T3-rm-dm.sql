@@ -28,54 +28,196 @@ INSERT INTO competitor
 VALUES (comp_seq.NEXTVAL, 'Jackson', 'Bull', 'M', TO_DATE('1996-06-15', 'YYYY-MM-DD'),
         'jackson.bull@student.monash.edu', 'Y', '0422412524');
 
--- Create team
-INSERT INTO team
+-- create entry
+-- Insert Keith entry using eventtype_desc '10 km run'
+INSERT INTO entry (
+    event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime,
+    comp_no, team_id, char_id
+)
 VALUES (
-    team_seq.NEXTVAL, 'Super Runners',
-    (SELECT carn_date FROM carnival WHERE UPPER(carn_name) = UPPER('RM WINTER SERIES CAULFIELD 2025')),
-    (SELECT event_id FROM event 
-     WHERE carn_date = (SELECT carn_date FROM carnival WHERE UPPER(carn_name) = UPPER('RM WINTER SERIES CAULFIELD 2025'))
-       AND UPPER(eventtype_code) = UPPER('10K')),
-    1
-);
-
--- Insert Keith entry
-INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime,
-                   comp_no, team_id, char_id)
-VALUES (
-    (SELECT event_id FROM event WHERE carn_date = 
-        (SELECT carn_date FROM carnival WHERE UPPER(carn_name) = 'RM WINTER SERIES CAULFIELD 2025')
-        AND UPPER(eventtype_code) = UPPER('10K')),
-    (SELECT NVL(MAX(entry_no), 0) + 1 FROM entry 
-     WHERE event_id = (
-         SELECT event_id FROM event 
-         WHERE carn_date = (SELECT carn_date FROM carnival WHERE UPPER(carn_name) = 'RM WINTER SERIES CAULFIELD 2025')
-           AND UPPER(eventtype_code) = UPPER('10K'))),
+    (
+        SELECT event_id
+        FROM event
+        WHERE carn_date = (
+            SELECT carn_date
+            FROM carnival
+            WHERE UPPER(carn_name) = UPPER('RM WINTER SERIES CAULFIELD 2025')
+        )
+        AND eventtype_code = (
+            SELECT eventtype_code
+            FROM eventtype
+            WHERE UPPER(eventtype_desc) = UPPER('10 km run')
+        )
+    ),
+    (
+        SELECT NVL(MAX(entry_no), 0) + 1
+        FROM entry
+        WHERE event_id = (
+            SELECT event_id
+            FROM event
+            WHERE carn_date = (
+                SELECT carn_date
+                FROM carnival
+                WHERE UPPER(carn_name) = UPPER('RM WINTER SERIES CAULFIELD 2025')
+            )
+            AND eventtype_code = (
+                SELECT eventtype_code
+                FROM eventtype
+                WHERE UPPER(eventtype_desc) = UPPER('10 km run')
+            )
+        )
+    ),
     NULL, NULL, NULL,
     (SELECT comp_no FROM competitor WHERE comp_phone = '0422141112'),
-    (SELECT team_id FROM team WHERE team_name = 'Super Runners' 
-        AND carn_date = (SELECT carn_date FROM carnival WHERE UPPER(carn_name) = 'RM WINTER SERIES CAULFIELD 2025')),
-    (SELECT char_id FROM charity WHERE UPPER(char_name) = UPPER('Salvation Army'))
+    NULL,
+    (
+        SELECT char_id
+        FROM charity
+        WHERE UPPER(char_name) = UPPER('Salvation Army')
+    )
 );
 
-
--- Insert Jackson entry
-INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime,
-                   comp_no, team_id, char_id)
+select * from entry;
+select * from carnival;
+-- Insert Jackson entry using eventtype_desc '10 km run'
+INSERT INTO entry (
+    event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime,
+    comp_no, team_id, char_id
+)
 VALUES (
-    (SELECT event_id FROM event WHERE carn_date = 
-        (SELECT carn_date FROM carnival WHERE UPPER(carn_name) = 'RM WINTER SERIES CAULFIELD 2025')
-        AND UPPER(eventtype_code) = UPPER('10K')),
-    (SELECT NVL(MAX(entry_no), 0) + 1 FROM entry 
-     WHERE event_id = (
-         SELECT event_id FROM event 
-         WHERE carn_date = (SELECT carn_date FROM carnival WHERE UPPER(carn_name) = 'RM WINTER SERIES CAULFIELD 2025')
-           AND UPPER(eventtype_code) = UPPER('10K'))),
-    NULL,NULL,NULL,
+    (
+        SELECT event_id
+        FROM event
+        WHERE carn_date = (
+            SELECT carn_date
+            FROM carnival
+            WHERE UPPER(carn_name) = UPPER('RM WINTER SERIES CAULFIELD 2025')
+        )
+        AND eventtype_code = (
+            SELECT eventtype_code
+            FROM eventtype
+            WHERE UPPER(eventtype_desc) = UPPER('10 km run')
+        )
+    ),
+    (
+        SELECT NVL(MAX(entry_no), 0) + 1
+        FROM entry
+        WHERE event_id = (
+            SELECT event_id
+            FROM event
+            WHERE carn_date = (
+                SELECT carn_date
+                FROM carnival
+                WHERE UPPER(carn_name) = UPPER('RM WINTER SERIES CAULFIELD 2025')
+            )
+            AND eventtype_code = (
+                SELECT eventtype_code
+                FROM eventtype
+                WHERE UPPER(eventtype_desc) = UPPER('10 km run')
+            )
+        )
+    ),
+    NULL, NULL, NULL,
     (SELECT comp_no FROM competitor WHERE comp_phone = '0422412524'),
-    (SELECT team_id FROM team WHERE team_name = 'Super Runners' 
-        AND carn_date = (SELECT carn_date FROM carnival WHERE UPPER(carn_name) = 'RM WINTER SERIES CAULFIELD 2025')),
-    (SELECT char_id FROM charity WHERE UPPER(char_name) = UPPER('RSPCA'))
+    NULL,
+    (
+        SELECT char_id
+        FROM charity
+        WHERE UPPER(char_name) = UPPER('RSPCA')
+    )
+);
+
+INSERT INTO team (
+    team_id, team_name, carn_date, event_id, entry_no
+)
+VALUES (
+    team_seq.NEXTVAL,
+    'Super Runners',
+    (SELECT carn_date 
+     FROM carnival 
+     WHERE UPPER(carn_name) = UPPER('RM WINTER SERIES CAULFIELD 2025')),
+    
+    (SELECT event_id 
+     FROM event 
+     WHERE carn_date = (SELECT carn_date 
+                        FROM carnival 
+                        WHERE UPPER(carn_name) = UPPER('RM WINTER SERIES CAULFIELD 2025'))
+       AND eventtype_code = (
+           SELECT eventtype_code 
+           FROM eventtype 
+           WHERE UPPER(eventtype_desc) = UPPER('10 km run'))),
+    
+    (SELECT entry_no 
+     FROM entry 
+     WHERE comp_no = (
+         SELECT comp_no 
+         FROM competitor 
+         WHERE comp_phone = '0422141112') -- Keith
+       AND event_id = (
+         SELECT event_id 
+         FROM event 
+         WHERE carn_date = (SELECT carn_date 
+                            FROM carnival 
+                            WHERE UPPER(carn_name) = UPPER('RM WINTER SERIES CAULFIELD 2025'))
+           AND eventtype_code = (
+               SELECT eventtype_code 
+               FROM eventtype 
+               WHERE UPPER(eventtype_desc) = UPPER('10 km run')))
+    )
+);
+
+-- Update Keith's entry
+UPDATE entry
+SET team_id = (
+    SELECT team_id 
+    FROM team 
+    WHERE team_name = 'Super Runners' 
+      AND carn_date = (SELECT carn_date 
+                       FROM carnival 
+                       WHERE UPPER(carn_name) = UPPER('RM WINTER SERIES CAULFIELD 2025'))
+)
+WHERE comp_no = (
+    SELECT comp_no 
+    FROM competitor 
+    WHERE comp_phone = '0422141112' -- Keith
+)
+AND event_id = (
+    SELECT event_id 
+    FROM event 
+    WHERE carn_date = (SELECT carn_date 
+                       FROM carnival 
+                       WHERE UPPER(carn_name) = UPPER('RM WINTER SERIES CAULFIELD 2025'))
+      AND eventtype_code = (
+          SELECT eventtype_code 
+          FROM eventtype 
+          WHERE UPPER(eventtype_desc) = UPPER('10 Km Run'))
+);
+
+-- Update Jackson's entry
+UPDATE entry
+SET team_id = (
+    SELECT team_id 
+    FROM team 
+    WHERE team_name = 'Super Runners' 
+      AND carn_date = (SELECT carn_date 
+                       FROM carnival 
+                       WHERE UPPER(carn_name) = UPPER('RM WINTER SERIES CAULFIELD 2025'))
+)
+WHERE comp_no = (
+    SELECT comp_no 
+    FROM competitor 
+    WHERE comp_phone = '0422412524' -- Jackson
+)
+AND event_id = (
+    SELECT event_id 
+    FROM event 
+    WHERE carn_date = (SELECT carn_date 
+                       FROM carnival 
+                       WHERE UPPER(carn_name) = UPPER('RM WINTER SERIES CAULFIELD 2025'))
+      AND eventtype_code = (
+          SELECT eventtype_code 
+          FROM eventtype 
+          WHERE UPPER(eventtype_desc) = UPPER('10 Km Run'))
 );
 
 

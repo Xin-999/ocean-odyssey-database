@@ -89,7 +89,8 @@ INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_
 VALUES (1, 4, TO_DATE('09:31:11', 'hh24:mi:ss'), TO_DATE('10:05:11', 'hh24:mi:ss'), TO_DATE('0:34:00', 'hh24:mi:ss'), 1, NULL, NULL);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
 VALUES (1, 5, TO_DATE('09:31:11', 'hh24:mi:ss'), TO_DATE('10:05:11', 'hh24:mi:ss'), TO_DATE('0:34:00', 'hh24:mi:ss'), 2, NULL, NULL);
-
+INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
+VALUES (7, 3, TO_DATE('08:31:11', 'hh24:mi:ss'), TO_DATE('10:05:11', 'hh24:mi:ss'), TO_DATE('1:34:00', 'hh24:mi:ss'), 3, NULL, NULL);
 
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
 VALUES (11, 2, TO_DATE('07:45:42', 'hh24:mi:ss'), TO_DATE('12:40:42', 'hh24:mi:ss'), TO_DATE('4:55:00', 'hh24:mi:ss'), 12, NULL, NULL);
@@ -117,6 +118,9 @@ INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_
 VALUES (4, 2, TO_DATE('08:30:38', 'hh24:mi:ss'), TO_DATE('09:25:38', 'hh24:mi:ss'), TO_DATE('0:55:00', 'hh24:mi:ss'), 14, NULL, 1);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
 VALUES (4, 3, TO_DATE('08:31:25', 'hh24:mi:ss'), TO_DATE('09:21:25', 'hh24:mi:ss'), TO_DATE('0:50:00', 'hh24:mi:ss'), 1, NULL, 4);
+INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
+VALUES (2, 1, TO_DATE('08:31:25', 'hh24:mi:ss'), TO_DATE('10:21:25', 'hh24:mi:ss'), TO_DATE('1:50:00', 'hh24:mi:ss'), 3, NULL, NULL);
+
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
 VALUES (4, 4, TO_DATE('08:30:38', 'hh24:mi:ss'),NULL, NULL, 4, NULL, NULL);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
@@ -169,6 +173,9 @@ VALUES (4, 'Speed Frank', TO_DATE('29/JUN/2025', 'DD/MON/YYYY'), 14, 1);
 -- VALUES (6, 2, TO_DATE('08:31:31', 'hh24:mi:ss'), TO_DATE('09:35:31', 'hh24:mi:ss'), TO_DATE('1:04:00', 'hh24:mi:ss'), 11, 1, NULL);
 -- INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
 -- VALUES (6, 3, TO_DATE('08:31:31', 'hh24:mi:ss'), TO_DATE('09:35:31', 'hh24:mi:ss'), TO_DATE('1:04:00', 'hh24:mi:ss'), 12, 1, NULL);
+UPDATE entry
+SET team_id = 1
+WHERE event_id = 6 AND entry_no = 1 AND comp_no = 10;
 
 UPDATE entry
 SET team_id = 1
@@ -179,16 +186,32 @@ SET team_id = 1
 WHERE event_id = 6 AND entry_no = 3 AND comp_no = 12;
 
 UPDATE entry
+SET team_id = 1
+WHERE event_id = 7 AND entry_no = 3 AND comp_no = 3;
+
+UPDATE entry
+SET team_id = 2
+WHERE event_id = 1 AND entry_no = 3 AND comp_no = 14;
+UPDATE entry
 SET team_id = 2
 WHERE event_id = 1 AND entry_no = 4 AND comp_no = 1;
 UPDATE entry
 SET team_id = 2
 WHERE event_id = 1 AND entry_no = 5 AND comp_no = 2;
+UPDATE entry
+SET team_id = 2
+WHERE event_id = 2 AND entry_no = 1 AND comp_no = 3;
 
+UPDATE entry
+SET team_id = 6
+WHERE event_id = 10 AND entry_no = 1 AND comp_no = 14;
 UPDATE entry
 SET team_id = 6
 WHERE event_id = 10 AND entry_no = 2 AND comp_no = 10;
 
+UPDATE entry
+SET team_id = 2
+WHERE event_id = 5 AND entry_no = 1 AND comp_no = 2;
 UPDATE entry
 SET team_id = 2
 WHERE event_id = 5 AND entry_no = 2 AND comp_no = 11;
@@ -198,15 +221,21 @@ WHERE event_id = 5 AND entry_no = 3 AND comp_no = 12;
 
 UPDATE entry
 SET team_id = 3
+WHERE event_id = 7 AND entry_no = 1 AND comp_no = 8;
+UPDATE entry
+SET team_id = 3
 WHERE event_id = 7 AND entry_no = 2 AND comp_no = 6;
 
 UPDATE entry
 SET team_id = 4
+WHERE event_id = 14 AND entry_no = 1 AND comp_no = 2;
+UPDATE entry
+SET team_id = 4
 WHERE event_id = 14 AND entry_no = 2 AND comp_no = 11;
-
 
 COMMIT;
 
+select * from entry;
 -- SELECT
 --     username,
 --     sid,
@@ -236,6 +265,7 @@ COMMIT;
 --         AND username = user
 --         AND upper(osuser) != 'ORACLE'
 --         AND status = 'INACTIVE';
+
 -- BEGIN
 --     OPEN inactive_sessions;
 --     LOOP

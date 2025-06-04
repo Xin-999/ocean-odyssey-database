@@ -47,8 +47,8 @@ COMMENT ON COLUMN competitor.comp_unistatus IS 'Competitor is a university stude
 COMMENT ON COLUMN competitor.comp_phone IS 'Competitor''s phone number - unique for each competitor';
 
 ALTER TABLE competitor ADD CONSTRAINT competitor_pk PRIMARY KEY (comp_no);
-ALTER TABLE competitor ADD CONSTRAINT competitor_uq1 UNIQUE (comp_email);
-ALTER TABLE competitor ADD CONSTRAINT competitor_uq2 UNIQUE (comp_phone);
+ALTER TABLE competitor ADD CONSTRAINT competitor_email_uq UNIQUE (comp_email);
+ALTER TABLE competitor ADD CONSTRAINT competitor_phone_uq UNIQUE (comp_phone);
 ALTER TABLE competitor ADD CONSTRAINT chk_comp_gender CHECK (comp_gender IN ('M', 'F', 'U'));
 ALTER TABLE competitor ADD CONSTRAINT chk_comp_unistatus CHECK (comp_unistatus IN ('Y', 'N'));
 
@@ -75,8 +75,7 @@ COMMENT ON COLUMN entry.team_id IS 'Team identifier (unique)';
 COMMENT ON COLUMN entry.char_id IS 'Charity unique identifier';
 
 ALTER TABLE entry ADD CONSTRAINT entry_pk PRIMARY KEY (event_id, entry_no);
-
-
+ALTER TABLE entry ADD CONSTRAINT chk_entry_no CHECK (entry_no > 0);
 
 --TEAM
 CREATE TABLE team (
@@ -94,7 +93,7 @@ COMMENT ON COLUMN team.event_id IS 'Event id (surrogate primary key)';
 COMMENT ON COLUMN team.entry_no IS 'Entry number (unique only within an event)';
 
 ALTER TABLE team ADD CONSTRAINT team_pk PRIMARY KEY (team_id);
-ALTER TABLE team ADD CONSTRAINT team_uq UNIQUE (team_name, carn_date);
+ALTER TABLE team ADD CONSTRAINT team_nk UNIQUE (team_name, carn_date);
 
 -- Add all missing FK Constraints below here
 ALTER TABLE entry 
