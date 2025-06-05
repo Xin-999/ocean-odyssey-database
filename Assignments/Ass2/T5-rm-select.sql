@@ -55,6 +55,30 @@ ORDER BY t.team_name,c.carn_date;
 -- PLEASE PLACE REQUIRED SQL SELECT STATEMENT FOR THIS PART HERE
 -- ENSURE that your query is formatted and has a semicolon
 -- (;) at the end of this answer
+SELECT et.eventtype_desc AS "Event",
+  c.carn_name||' held '||
+  TO_CHAR(c.carn_date,'Dy dd-Mon-yyyy') AS "Carnival",
+  TO_CHAR(e.entry_elapsedtime,'HH24:MI:SS') AS "Current Record",
+  LPAD(co.comp_no,5,'0')||' '|| co.comp_fname ||' '|| co.comp_lname AS "Competitor No and Name",
+  EXTRACT(YEAR FROM c.carn_date) - EXTRACT(YEAR FROM comp_dob) 
+    - CASE
+      WHEN TO_CHAR(c.carn_date,'MMDD')
+        < TO_CHAR(comp_dob ,'MMDD') THEN 1
+      ELSE 0
+  END AS age_at_carnival
+FROM eventtype et
+  JOIN event ev ON ev.eventtype_code = et.eventtype_code
+  JOIN carnival c ON c.carn_date = ev.carn_date
+  JOIN entry e ON e.event_id = ev.event_id
+  JOIN competitor co ON co.comp_no = e.comp_no
+WHERE e.entry_elapsedtime = ( 
+  SELECT MIN(e2.entry_elapsedtime)
+  FROM event ev2
+  JOIN entry e2 ON e2.event_id = ev2.event_id
+  WHERE ev2.eventtype_code = ev.eventtype_code
+  AND e2.entry_elapsedtime is not null)
+ORDER BY et.eventtype_desc,co.comp_no;
+
 
 
 
