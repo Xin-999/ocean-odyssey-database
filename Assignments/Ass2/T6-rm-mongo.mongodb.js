@@ -44,6 +44,18 @@ db.teams.find();
 // ENSURE that your query is formatted and has a semicolon
 // (;) at the end of this answer
 
+db.teams.find(
+  {
+    "team_members.event_type": { "$in": [ "5 Km Run", "10 Km Run" ] }
+  },
+  {
+    _id: 0,
+    carn_date: 1,
+    carn_name: 1,
+    team_name: 1,
+    "team_leader.name": 1
+  }
+);
 
 
 
