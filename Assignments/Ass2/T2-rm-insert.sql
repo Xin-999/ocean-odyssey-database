@@ -59,9 +59,9 @@ VALUES (14, 2, TO_DATE('08:00:32', 'hh24:mi:ss'), TO_DATE('10:48:32', 'hh24:mi:s
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
 VALUES (1, 1, TO_DATE('09:30:15', 'hh24:mi:ss'), TO_DATE('10:09:15', 'hh24:mi:ss'), TO_DATE('0:39:00', 'hh24:mi:ss'), 10, NULL, NULL);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
-VALUES (6, 1, TO_DATE('08:31:31', 'hh24:mi:ss'), TO_DATE('09:35:31', 'hh24:mi:ss'), TO_DATE('1:04:00', 'hh24:mi:ss'), 10, NULL, NULL);
+VALUES (6, 1, TO_DATE('08:31:31', 'hh24:mi:ss'), TO_DATE('09:46:31', 'hh24:mi:ss'), TO_DATE('0:15:00', 'hh24:mi:ss'), 10, NULL, NULL);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
-VALUES (6, 2, TO_DATE('08:31:31', 'hh24:mi:ss'), TO_DATE('09:35:31', 'hh24:mi:ss'), TO_DATE('1:04:00', 'hh24:mi:ss'), 11, NULL, NULL);
+VALUES (6, 2, TO_DATE('08:31:31', 'hh24:mi:ss'), TO_DATE('09:00:31', 'hh24:mi:ss'), TO_DATE('0:29:00', 'hh24:mi:ss'), 11, NULL, NULL);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
 VALUES (6, 3, TO_DATE('08:31:31', 'hh24:mi:ss'), TO_DATE('09:35:31', 'hh24:mi:ss'), TO_DATE('1:04:00', 'hh24:mi:ss'), 12, NULL, NULL);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
