@@ -60,12 +60,7 @@ SELECT et.eventtype_desc AS "Event",
   TO_CHAR(c.carn_date,'Dy dd-Mon-yyyy') AS "Carnival",
   TO_CHAR(e.entry_elapsedtime,'HH24:MI:SS') AS "Current Record",
   LPAD(co.comp_no,5,'0')||' '|| co.comp_fname ||' '|| co.comp_lname AS "Competitor No and Name",
-  EXTRACT(YEAR FROM c.carn_date) - EXTRACT(YEAR FROM comp_dob) 
-    - CASE
-      WHEN TO_CHAR(c.carn_date,'MMDD')
-        < TO_CHAR(comp_dob ,'MMDD') THEN 1
-      ELSE 0
-  END AS age_at_carnival
+  FLOOR(MONTHS_BETWEEN(c.carn_date, co.comp_dob) / 12 ) AS "Age at Carnival"
 FROM eventtype et
   JOIN event ev ON ev.eventtype_code = et.eventtype_code
   JOIN carnival c ON c.carn_date = ev.carn_date
@@ -81,13 +76,50 @@ ORDER BY et.eventtype_desc,co.comp_no;
 
 
 
-
-
-
-
 /* (c) */
 -- PLEASE PLACE REQUIRED SQL SELECT STATEMENT FOR THIS PART HERE
 -- ENSURE that your query is formatted and has a semicolon
 -- (;) at the end of this answer
+SELECT c.carn_name AS "Carnival Name",
+  TO_CHAR(c.carn_date,'DD Mon YYYY') AS "Carnival Date",
+  et.eventtype_desc AS "Event Description",
 
+  CASE
+    WHEN evt_cnt.cnt IS NULL
+    THEN 'Not offered'
+    ELSE LPAD( TO_CHAR(evt_cnt.cnt), 17)
+  END AS "Number of Entries",
+
+  CASE
+    WHEN evt_cnt.cnt IS NULL OR all_cnt.total_cnt = 0
+    THEN RPAD(' ',21)
+    ELSE LPAD(TO_CHAR(ROUND( evt_cnt.cnt*100 / all_cnt.total_cnt)),21)
+ END AS "% of Carnival Entries"
+
+FROM carnival c
+CROSS JOIN eventtype et
+
+--total entries in that carnival
+LEFT JOIN (
+ SELECT e.carn_date,
+ COUNT(*) AS total_cnt
+ FROM event e
+  JOIN entry en ON en.event_id = e.event_id
+ GROUP BY e.carn_date
+) all_cnt
+ ON all_cnt.carn_date = c.carn_date
+
+--entries in that carnival for that event-type
+LEFT JOIN (
+ SELECT e.carn_date,
+ e.eventtype_code,
+ COUNT(*) AS cnt
+ FROM event e
+  JOIN entry en ON en.event_id = e.event_id
+ GROUP BY e.carn_date,e.eventtype_code
+) evt_cnt
+ ON evt_cnt.carn_date = c.carn_date
+ AND evt_cnt.eventtype_code = et.eventtype_code
+ORDER BY c.carn_date, evt_cnt.cnt DESC,et.eventtype_desc;
+-- ORDER BY c.carn_date, NVL(evt_cnt.cnt,-1) DESC,et.eventtype_desc;
 
