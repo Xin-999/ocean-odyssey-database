@@ -1,8 +1,8 @@
 // *****PLEASE ENTER YOUR DETAILS BELOW*****
 // T6-rm-mongo.mongodb.js
 
-// Student ID:
-// Student Name:
+// Student ID: 33520054
+// Student Name: Ang Qiao Xin
 
 // Comments for your marker:
 
@@ -13,7 +13,7 @@
 // Use (connect to) your database - you MUST update xyz001
 // with your authcate username
 
-use("xyz001");
+use("qang0004");
 
 // (b)
 // PLEASE PLACE REQUIRED MONGODB COMMAND TO CREATE THE COLLECTION HERE
@@ -22,7 +22,7 @@ use("xyz001");
 // (;) at the end of this answer
 
 // Drop collection
-
+db.enrolment.drop();
 
 // Create collection and insert documents
 
