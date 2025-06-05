@@ -67,13 +67,38 @@ db.teams.find(
 
 
 // (i) Add new team
-
+db.teams.insertOne({
+    _id: 888,
+    carn_name : "RM WINTER SERIES CAULFIELD 2025",
+    carn_date : "29-Jun-2025",
+    team_name : "The Great Runners",
+    team_leader : {
+        name  : "Jackson Bull",
+        phone : "0422412524",
+        email : "jackson.bull@example.com"
+    },
+    team_no_of_members : 1,
+    team_members : [
+        {
+            competitor_name  : "Jackson Bull",
+            competitor_phone : "0422412524",
+            event_type       : "5 Km Run",
+            entry_no         : 1,
+            starttime        : "-",
+            finishtime       : "-",
+            elapsedtime      : "-"
+        }
+    ]
+});
 
 
 
 
 // Illustrate/confirm changes made
-
+db.teams.find(
+    { team_name : "The Great Runners",
+      carn_name : "RM WINTER SERIES CAULFIELD 2025" }
+);
 
 
 
