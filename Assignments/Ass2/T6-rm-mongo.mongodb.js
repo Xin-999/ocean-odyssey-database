@@ -22,7 +22,7 @@ use("qang0004");
 // (;) at the end of this answer
 
 // Drop collection
-db.enrolment.drop();
+db.teams.drop();
 
 // Create collection and insert documents
 
