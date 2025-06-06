@@ -5,7 +5,10 @@
 --Student Name: Ang Qiao Xin
 
 /* Comments for your marker:
-
+I dropped the char_id column from the ENTRY table after migrating all existing charity data into the new CHARITY_SUPPORT table.
+This decision was made to prevent data duplication and maintain data integrity, as storing the same charity 
+reference in both ENTRY and CHARITY_SUPPORT would risk inconsistency.
+All charity support information is now handled by the new table, allowing support for multiple charities per entry.
 
 
 
