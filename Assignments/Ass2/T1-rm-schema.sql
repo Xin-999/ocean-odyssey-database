@@ -28,8 +28,8 @@ DROP TABLE team CASCADE CONSTRAINTS PURGE;
 -- COMPETITOR
 CREATE TABLE competitor (
     comp_no         NUMBER(5)     NOT NULL,
-    comp_fname      VARCHAR2(30)  NOT NULL,
-    comp_lname      VARCHAR2(30)  NOT NULL,
+    comp_fname      VARCHAR2(30)  ,
+    comp_lname      VARCHAR2(30)  ,
     comp_gender     CHAR(1)       NOT NULL,
     comp_dob        DATE          NOT NULL,
     comp_email      VARCHAR2(50)  NOT NULL,
