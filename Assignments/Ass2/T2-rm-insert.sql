@@ -6,8 +6,9 @@
 
 /* Comments for your marker:
 I assume this carnival following system date that means that event 12,13,14 which happening in
-29/6/2025 means it not yet happen.
-
+29/6/2025 means it not yet happen. So no entry start,end and elapsedtime.
+Assume runner start a few minutes late because they at different starting position
+to start to run and pass the starting line.
 
 */
 
@@ -30,7 +31,7 @@ INSERT INTO competitor VALUES (8, 'Hannah', 'Kaur', 'F', TO_DATE('25-06-1992', '
 INSERT INTO competitor VALUES (9, 'Isaac', 'Chong', 'M', TO_DATE('12-02-1990', 'DD-MM-YYYY'), 'isaac.chong@gmail.com', 'N', '0490123456');
 INSERT INTO competitor VALUES (10, 'Jasmine', 'Lim', 'F', TO_DATE('08-08-1985', 'DD-MM-YYYY'), 'jasmine.lim@gmail.com', 'N', '0401234567');
 
-INSERT INTO competitor VALUES (11, 'Kevin', 'Ong', 'M', TO_DATE('14-10-2002', 'DD-MM-YYYY'), 'kevin.ong@gmail.com', 'N', '0411111111');
+INSERT INTO competitor VALUES (11, 'Kevin', NULL, 'M', TO_DATE('14-10-2002', 'DD-MM-YYYY'), 'kevin.ong@gmail.com', 'N', '0411111111');
 INSERT INTO competitor VALUES (12, 'Lydia', 'Yap', 'F', TO_DATE('19-01-1996', 'DD-MM-YYYY'), 'lydia.yap@student.monash.edu', 'Y', '0422222222');
 INSERT INTO competitor VALUES (13, 'Marcus', 'Goh', 'M', TO_DATE('11-11-1993', 'DD-MM-YYYY'), 'marcus.goh@gmail.com', 'N', '0433333333');
 INSERT INTO competitor VALUES (14, 'Nina', 'Tan', 'F', TO_DATE('17-03-1998', 'DD-MM-YYYY'), 'nina.tan@student.monash.edu', 'Y', '0444444444');
@@ -131,36 +132,36 @@ VALUES (9, 2, NULL, NULL, NULL, 13, NULL, 1);
 -- TEAM
 -- =======================================
 INSERT INTO team (team_id, team_name, carn_date, event_id, entry_no)
-VALUES (1, 'Golden Striders', TO_DATE('02/FEB/2025', 'DD/MON/YYYY'), 6, 1);
+VALUES (1, 'Golden Striders', (SELECT carn_date FROM event WHERE event_id = 6), 6, 1);
 -- INSERT INTO team (team_id, team_name, carn_date, event_id, entry_no)
 -- VALUES (1, 'Golden Striders', TO_DATE('02/FEB/2025', 'DD/MON/YYYY'), 6, 2);
 -- INSERT INTO team (team_id, team_name, carn_date, event_id, entry_no)
 -- VALUES (1, 'Golden Striders', TO_DATE('02/FEB/2025', 'DD/MON/YYYY'), 6, 3);
 INSERT INTO team (team_id, team_name, carn_date, event_id, entry_no)
-VALUES (6, 'Golden Striders', TO_DATE('15/MAR/2025', 'DD/MON/YYYY'), 10, 1);
+VALUES (6, 'Golden Striders', (SELECT carn_date FROM event WHERE event_id = 10), 10, 1);
 -- INSERT INTO team (team_id, team_name, carn_date, event_id, entry_no)
 -- VALUES (6, 'Golden Striders', TO_DATE('15/MAR/2025', 'DD/MON/YYYY'), 10, 2);
 
 INSERT INTO team (team_id, team_name, carn_date, event_id, entry_no)
-VALUES (2, 'Urban Cheetahs', TO_DATE('22/SEP/2024', 'DD/MON/YYYY'), 1, 3);
+VALUES (2, 'Urban Cheetahs',(SELECT carn_date FROM event WHERE event_id = 1), 1, 3);
 -- INSERT INTO team (team_id, team_name, carn_date, event_id, entry_no)
 -- VALUES (2, 'Urban Cheetahs', TO_DATE('22/SEP/2024', 'DD/MON/YYYY'), 1, 4);
 -- INSERT INTO team (team_id, team_name, carn_date, event_id, entry_no)
 -- VALUES (2, 'Urban Cheetahs', TO_DATE('22/SEP/2024', 'DD/MON/YYYY'), 1, 5);
 INSERT INTO team (team_id, team_name, carn_date, event_id, entry_no)
-VALUES (5, 'Urban Cheetahs', TO_DATE('05/OCT/2024', 'DD/MON/YYYY'), 5, 1);
+VALUES (5, 'Urban Cheetahs', (SELECT carn_date FROM event WHERE event_id = 5), 5, 1);
 -- INSERT INTO team (team_id, team_name, carn_date, event_id, entry_no)
 -- VALUES (2, 'Urban Cheetahs', TO_DATE('05/OCT/2024', 'DD/MON/YYYY'), 5, 2);
 -- INSERT INTO team (team_id, team_name, carn_date, event_id, entry_no)
 -- VALUES (2, 'Urban Cheetahs', TO_DATE('05/OCT/2024', 'DD/MON/YYYY'), 5, 3);
 
 INSERT INTO team (team_id, team_name, carn_date, event_id, entry_no)
-VALUES (3, 'Mighty Pacers', TO_DATE('02/FEB/2025', 'DD/MON/YYYY'), 7, 1);
+VALUES (3, 'Mighty Pacers', (SELECT carn_date FROM event WHERE event_id = 7), 7, 1);
 -- INSERT INTO team (team_id, team_name, carn_date, event_id, entry_no)
 -- VALUES (3, 'Mighty Pacers', TO_DATE('02/FEB/2025', 'DD/MON/YYYY'), 7, 2);
 
 INSERT INTO team (team_id, team_name, carn_date, event_id, entry_no)
-VALUES (4, 'Speed Frank', TO_DATE('29/JUN/2025', 'DD/MON/YYYY'), 14, 1);
+VALUES (4, 'Speed Frank', (SELECT carn_date FROM event WHERE event_id = 14), 14, 1);
 -- INSERT INTO team (team_id, team_name, carn_date, event_id, entry_no)
 -- VALUES (4, 'Speed Frank', TO_DATE('29/JUN/2025', 'DD/MON/YYYY'), 14, 2);
 
@@ -210,13 +211,13 @@ SET team_id = 6
 WHERE event_id = 10 AND entry_no = 2 AND comp_no = 10;
 
 UPDATE entry
-SET team_id = 2
+SET team_id = 5
 WHERE event_id = 5 AND entry_no = 1 AND comp_no = 2;
 UPDATE entry
-SET team_id = 2
+SET team_id = 5
 WHERE event_id = 5 AND entry_no = 2 AND comp_no = 11;
 UPDATE entry
-SET team_id = 2
+SET team_id = 5
 WHERE event_id = 5 AND entry_no = 3 AND comp_no = 12;
 
 UPDATE entry
@@ -235,7 +236,6 @@ WHERE event_id = 14 AND entry_no = 2 AND comp_no = 11;
 
 COMMIT;
 
-select * from entry;
 -- SELECT
 --     username,
 --     sid,
@@ -276,7 +276,7 @@ select * from entry;
 
 --     CLOSE inactive_sessions;
 -- END;
--- /
+
 
 -- select * from entry;
 -- select * from team;
