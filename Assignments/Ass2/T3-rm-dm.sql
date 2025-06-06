@@ -77,8 +77,6 @@ VALUES (
     )
 );
 
-select * from entry;
-select * from carnival;
 -- Insert Jackson entry using eventtype_desc '10 km run'
 INSERT INTO entry (
     event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime,
