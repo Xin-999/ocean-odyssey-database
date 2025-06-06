@@ -24,13 +24,33 @@ SELECT
     'carn_date' VALUE TO_CHAR(c.carn_date,'dd-Mon-yyyy'),
     'team_name' VALUE t.team_name,
     'team_leader' VALUE JSON_OBJECT(
-        'name' VALUE lead.comp_fname||' '||lead.comp_lname,
+        'name' VALUE 
+            CASE 
+                WHEN lead.comp_fname IS NULL AND lead.comp_lname IS NULL THEN '-'
+                ELSE 
+                    NVL(lead.comp_fname, '') || 
+                    CASE 
+                        WHEN lead.comp_fname IS NOT NULL AND lead.comp_lname IS NOT NULL THEN ' '
+                        ELSE ''
+                    END || 
+                    NVL(lead.comp_lname, '')
+            END,
         'phone' VALUE lead.comp_phone,
         'email' VALUE lead.comp_email),
     'team_no_of_members' VALUE COUNT(*),
     'team_members' VALUE JSON_ARRAYAGG(
         JSON_OBJECT(
-        'competitor_name' VALUE mem.comp_fname||' '||mem.comp_lname,
+            'competitor_name' VALUE 
+            CASE 
+                WHEN mem.comp_fname IS NULL AND mem.comp_lname IS NULL THEN '-'
+                ELSE 
+                    NVL(mem.comp_fname, '') || 
+                    CASE 
+                        WHEN mem.comp_fname IS NOT NULL AND mem.comp_lname IS NOT NULL THEN ' '
+                        ELSE ''
+                    END || 
+                    NVL(mem.comp_lname, '')
+            END,
         'competitor_phone' VALUE mem.comp_phone,
         'event_type' VALUE et.eventtype_desc,
         'entry_no' VALUE ent.entry_no,
