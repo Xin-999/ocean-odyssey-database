@@ -5,8 +5,8 @@
 --Student Name: Ang Qiao Xin
 
 /* Comments for your marker:
-
-
+I assume this carnival following system date that means that event 12,13,14 which happening in
+29/6/2025 means it not yet happen.
 
 
 */
@@ -47,15 +47,15 @@ VALUES (10, 1, TO_DATE('08:00:44', 'hh24:mi:ss'), TO_DATE('09:04:44', 'hh24:mi:s
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
 VALUES (10, 2, TO_DATE('08:31:06', 'hh24:mi:ss'), TO_DATE('09:13:06', 'hh24:mi:ss'), TO_DATE('0:42:00', 'hh24:mi:ss'), 10, NULL, NULL);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
-VALUES (13, 1, TO_DATE('08:30:13', 'hh24:mi:ss'), TO_DATE('09:18:13', 'hh24:mi:ss'), TO_DATE('0:48:00', 'hh24:mi:ss'), 14, NULL, 1);
+VALUES (13, 1, NULL,NULL,NULL, 14, NULL, 1);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
-VALUES (14, 1, TO_DATE('08:00:58', 'hh24:mi:ss'), TO_DATE('08:39:58', 'hh24:mi:ss'), TO_DATE('0:39:00', 'hh24:mi:ss'), 2, NULL, NULL);
+VALUES (14, 1, NULL,NULL,NULL, 2, NULL, NULL);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
 VALUES (5, 1, TO_DATE('08:01:12', 'hh24:mi:ss'), TO_DATE('09:51:12', 'hh24:mi:ss'), TO_DATE('1:50:00', 'hh24:mi:ss'), 2, NULL, NULL);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
 VALUES (8, 1, TO_DATE('08:01:04', 'hh24:mi:ss'), TO_DATE('08:49:04', 'hh24:mi:ss'), TO_DATE('0:48:00', 'hh24:mi:ss'), 11, NULL, NULL);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
-VALUES (14, 2, TO_DATE('08:00:32', 'hh24:mi:ss'), TO_DATE('10:48:32', 'hh24:mi:ss'), TO_DATE('2:48:00', 'hh24:mi:ss'), 11, NULL, NULL);
+VALUES (14, 2, NULL,NULL,NULL, 11, NULL, NULL);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
 VALUES (1, 1, TO_DATE('09:30:15', 'hh24:mi:ss'), TO_DATE('10:09:15', 'hh24:mi:ss'), TO_DATE('0:39:00', 'hh24:mi:ss'), 10, NULL, NULL);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
@@ -71,13 +71,13 @@ INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_
 VALUES (1, 2, TO_DATE('09:31:03', 'hh24:mi:ss'), TO_DATE('10:07:03', 'hh24:mi:ss'), TO_DATE('0:36:00', 'hh24:mi:ss'), 8, NULL, NULL);
 
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
-VALUES (12, 1, TO_DATE('08:46:06', 'hh24:mi:ss'), TO_DATE('09:30:06', 'hh24:mi:ss'), TO_DATE('0:44:00', 'hh24:mi:ss'), 10, NULL, NULL);
+VALUES (12, 1, NULL,NULL,NULL, 10, NULL, NULL);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
-VALUES (13, 2, TO_DATE('08:31:27', 'hh24:mi:ss'), TO_DATE('09:35:27', 'hh24:mi:ss'), TO_DATE('1:04:00', 'hh24:mi:ss'), 9, NULL, NULL);
+VALUES (13, 2, NULL,NULL,NULL, 9, NULL, NULL);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
 VALUES (9, 1, TO_DATE('08:01:57', 'hh24:mi:ss'), TO_DATE('09:55:57', 'hh24:mi:ss'), TO_DATE('1:54:00', 'hh24:mi:ss'), 4, NULL, 4);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
-VALUES (12, 2, TO_DATE('08:46:27', 'hh24:mi:ss'), TO_DATE('09:46:27', 'hh24:mi:ss'), TO_DATE('1:00:00', 'hh24:mi:ss'), 7, NULL, NULL);
+VALUES (12, 2, NULL,NULL,NULL, 7, NULL, NULL);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
 VALUES (11, 1, TO_DATE('07:46:15', 'hh24:mi:ss'), TO_DATE('12:32:15', 'hh24:mi:ss'), TO_DATE('4:46:00', 'hh24:mi:ss'), 1, NULL, NULL);
 INSERT INTO entry (event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime, comp_no, team_id, char_id)
