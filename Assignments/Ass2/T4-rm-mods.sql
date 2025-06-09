@@ -55,10 +55,10 @@ COMMENT ON COLUMN charity_support.char_id IS 'Charity unique identifier';
 COMMENT ON COLUMN charity_support.cs_percentage IS 'Percent of funds raised by the competitor (0-100) for this charity';
 
 ALTER TABLE charity_support ADD CONSTRAINT charity_support_pk PRIMARY KEY (cs_id);
-ALTER TABLE charity_support ADD CONSTRAINT entry_charsupp_fk FOREIGN KEY (event_id, entry_no) REFERENCES entry (event_id, entry_no);
-ALTER TABLE charity_support ADD CONSTRAINT charity_charsupp_fk FOREIGN KEY (char_id) REFERENCES charity (char_id);
 ALTER TABLE charity_support ADD CONSTRAINT charity_support_nk UNIQUE (event_id, entry_no, char_id);
 ALTER TABLE charity_support ADD CONSTRAINT chk_cs_percentage CHECK (cs_percentage BETWEEN 0 AND 100);
+ALTER TABLE charity_support ADD CONSTRAINT entry_charsupp_fk FOREIGN KEY (event_id, entry_no) REFERENCES entry (event_id, entry_no);
+ALTER TABLE charity_support ADD CONSTRAINT charity_charsupp_fk FOREIGN KEY (char_id) REFERENCES charity (char_id);
 
 --  Migrate every existing charity to new table
 INSERT INTO charity_support (cs_id, event_id, entry_no, char_id, cs_percentage)
