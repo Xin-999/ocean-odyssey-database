@@ -6,8 +6,8 @@
 
 
 /* Comments for your marker:
-
-
+I assume the leader is counted as the number of member.
+For 5c, because of the rounding, the sum of percentage might not be 100.
 
 
 */
@@ -17,31 +17,35 @@
 -- PLEASE PLACE REQUIRED SQL SELECT STATEMENT FOR THIS PART HERE
 -- ENSURE that your query is formatted and has a semicolon
 -- (;) at the end of this answer
-
-SELECT t.team_name, TO_CHAR(c.carn_date,'dd-Mon-yyyy') AS carnival_date,
-  ld.comp_fname||' '||ld.comp_lname AS teamleader,
-  (SELECT COUNT(*)
-  FROM entry e
-  WHERE e.team_id = t.team_id) AS team_no_members
+SELECT 
+  TRIM(t.team_name) AS team_name, 
+  TO_CHAR(t.carn_date, 'dd-Mon-yyyy') AS carnival_date,
+  TRIM(ld.comp_fname) || ' ' || TRIM(ld.comp_lname) AS teamleader,
+  (
+    SELECT COUNT(*) 
+    FROM entry e 
+    WHERE e.team_id = t.team_id
+  ) AS team_no_members
 FROM team t
-  JOIN carnival c ON c.carn_date = t.carn_date
   JOIN entry le ON le.event_id = t.event_id AND le.entry_no = t.entry_no
   JOIN competitor ld ON ld.comp_no = le.comp_no
 WHERE t.team_name IN (
   SELECT team_name
   FROM team t
-  JOIN carnival c2 ON c2.carn_date = t.carn_date
-  WHERE c2.carn_date <= SYSDATE
+  WHERE t.carn_date < SYSDATE
   GROUP BY team_name
-  HAVING COUNT(DISTINCT c2.carn_date) =
-    (SELECT MAX(cnt)
+  HAVING COUNT(DISTINCT t.carn_date) = (
+    SELECT MAX(cnt)
     FROM (
-    SELECT COUNT(DISTINCT c2.carn_date) cnt
-    FROM team t2
-    JOIN carnival c2 ON c2.carn_date = t2.carn_date
-    WHERE c2.carn_date <= SYSDATE
-    GROUP BY t2.team_name)))
-ORDER BY t.team_name,c.carn_date;
+      SELECT COUNT(DISTINCT t2.carn_date) AS cnt
+      FROM team t2
+      WHERE t2.carn_date < SYSDATE
+      GROUP BY t2.team_name
+    )
+  )
+)
+ORDER BY t.team_name, t.carn_date;
+
 
 /* (b) */
 -- PLEASE PLACE REQUIRED SQL SELECT STATEMENT FOR THIS PART HERE
@@ -51,7 +55,7 @@ SELECT et.eventtype_desc AS "Event",
   c.carn_name||' held '||
   TO_CHAR(c.carn_date,'Dy dd-Mon-yyyy') AS "Carnival",
   TO_CHAR(e.entry_elapsedtime,'HH24:MI:SS') AS "Current Record",
-  LPAD(co.comp_no,5,'0')||' '|| co.comp_fname ||' '|| co.comp_lname AS "Competitor No and Name",
+  TO_CHAR(co.comp_no, '00000') ||' '|| trim(co.comp_fname) ||' '|| trim(co.comp_lname) AS "Competitor No and Name",
   FLOOR(MONTHS_BETWEEN(c.carn_date, co.comp_dob) / 12 ) AS "Age at Carnival"
 FROM eventtype et
   JOIN event ev ON ev.eventtype_code = et.eventtype_code
@@ -79,7 +83,7 @@ SELECT c.carn_name AS "Carnival Name",
   CASE
     WHEN evt_cnt.cnt IS NULL
     THEN 'Not offered'
-    ELSE LPAD( TO_CHAR(evt_cnt.cnt), 17)
+    ELSE LPAD(TO_CHAR(evt_cnt.cnt), 17)
   END AS "Number of Entries",
 
   CASE
@@ -113,4 +117,3 @@ LEFT JOIN (
  ON evt_cnt.carn_date = c.carn_date
  AND evt_cnt.eventtype_code = et.eventtype_code
 ORDER BY c.carn_date, evt_cnt.cnt DESC,et.eventtype_desc;
--- ORDER BY c.carn_date, NVL(evt_cnt.cnt,-1) DESC,et.eventtype_desc;
