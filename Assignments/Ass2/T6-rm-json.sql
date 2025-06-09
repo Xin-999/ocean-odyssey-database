@@ -6,7 +6,7 @@
 
 
 /* Comments for your marker:
-
+Used trim to ensure no extra space in middle of full name.
 
 
 
@@ -28,12 +28,12 @@ SELECT
             CASE 
                 WHEN lead.comp_fname IS NULL AND lead.comp_lname IS NULL THEN '-'
                 ELSE 
-                    NVL(lead.comp_fname, '') || 
+                    NVL(TRIM(lead.comp_fname), '') || 
                     CASE 
                         WHEN lead.comp_fname IS NOT NULL AND lead.comp_lname IS NOT NULL THEN ' '
                         ELSE ''
                     END || 
-                    NVL(lead.comp_lname, '')
+                    NVL(TRIM(lead.comp_lname), '')
             END,
         'phone' VALUE lead.comp_phone,
         'email' VALUE lead.comp_email),
@@ -44,12 +44,12 @@ SELECT
             CASE 
                 WHEN mem.comp_fname IS NULL AND mem.comp_lname IS NULL THEN '-'
                 ELSE 
-                    NVL(mem.comp_fname, '') || 
+                    NVL(TRIM(mem.comp_fname), '') || 
                     CASE 
                         WHEN mem.comp_fname IS NOT NULL AND mem.comp_lname IS NOT NULL THEN ' '
                         ELSE ''
                     END || 
-                    NVL(mem.comp_lname, '')
+                    NVL(TRIM(mem.comp_lname), '')
             END,
         'competitor_phone' VALUE mem.comp_phone,
         'event_type' VALUE et.eventtype_desc,
@@ -63,11 +63,9 @@ SELECT
         || ','
 FROM team t
     JOIN carnival c ON c.carn_date = t.carn_date
-    -- leader row
     JOIN entry e_lead ON e_lead.event_id = t.event_id
     AND e_lead.entry_no = t.entry_no
     JOIN competitor lead ON lead.comp_no = e_lead.comp_no
-    -- every member (including leader again)
     JOIN entry ent ON ent.team_id = t.team_id
     JOIN competitor mem ON mem.comp_no = ent.comp_no
     JOIN event ev ON ev.event_id = ent.event_id
@@ -77,7 +75,3 @@ GROUP BY
     c.carn_date,lead.comp_fname,
     lead.comp_lname,lead.comp_phone,lead.comp_email
 ORDER BY t.team_id;
-
-
-
-
