@@ -28,8 +28,7 @@ INSERT INTO competitor
 VALUES (comp_seq.NEXTVAL, 'Jackson', 'Bull', 'M', TO_DATE('1996-06-15', 'YYYY-MM-DD'),
         'jackson.bull@student.monash.edu', 'Y', '0422412524');
 
--- create entry
--- Insert Keith entry using eventtype_desc '10 km run'
+-- Insert Keith entry
 INSERT INTO entry (
     event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime,
     comp_no, team_id, char_id
@@ -77,7 +76,7 @@ VALUES (
     )
 );
 
--- Insert Jackson entry using eventtype_desc '10 km run'
+-- Insert Jackson entry
 INSERT INTO entry (
     event_id, entry_no, entry_starttime, entry_finishtime, entry_elapsedtime,
     comp_no, team_id, char_id
