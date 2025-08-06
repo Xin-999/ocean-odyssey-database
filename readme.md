@@ -12,23 +12,24 @@ This project is split into two major phases:
 
 ## 🧱 Project Structure
 
+```txt
 📦 RunMonashDB
-├── ass1/ # Phase 1: Cruise database design
-│ ├── oo_conceptual.pdf # ERD in Crow's Foot notation
-│ ├── oo_normalised.pdf # UNF → 1NF → 2NF → 3NF steps
-│ ├── oo_logical.pdf # Logical schema (3NF)
-│ ├── oo_schema.sql # Final schema (DDL)
-│ └── README.md # Summary of design decisions
+├── ass1/                    # Phase 1: Cruise database design
+│   ├── oo_conceptual.pdf     # ERD in Crow's Foot notation
+│   ├── oo_normalised.pdf     # UNF → 1NF → 2NF → 3NF steps
+│   ├── oo_logical.pdf        # Logical schema (3NF)
+│   ├── oo_schema.sql         # Final schema (DDL)
+│   └── README.md             # Summary of design decisions
 │
-├── ass2/ # Phase 2: RunMonash event system
-│ ├── T1-rm-schema.sql # Create missing tables & constraints
-│ ├── T2-rm-insert.sql # Populate test data for COMPETITOR, ENTRY, TEAM
-│ ├── T3-rm-dm.sql # Transactions & DML logic
-│ ├── T4-rm-mods.sql # Live database modifications
-│ ├── T5-rm-select.sql # Advanced queries & reports
-│ ├── T6-rm-json.sql # Export to JSON
-│ └── T6-rm-mongo.js # MongoDB import & aggregation
-
+├── ass2/                    # Phase 2: RunMonash event system
+│   ├── T1-rm-schema.sql      # Create missing tables & constraints
+│   ├── T2-rm-insert.sql      # Populate test data for COMPETITOR, ENTRY, TEAM
+│   ├── T3-rm-dm.sql          # Transactions & DML logic
+│   ├── T4-rm-mods.sql        # Live database modifications
+│   ├── T5-rm-select.sql      # Advanced queries & reports
+│   ├── T6-rm-json.sql        # Export to JSON
+│   └── T6-rm-mongo.js        # MongoDB import & aggregation
+```
 ---
 
 ## 🔍 Highlights
