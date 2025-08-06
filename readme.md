@@ -1,6 +1,6 @@
 Readme
 
-# RunMonashDB – Relational + NoSQL Database Project
+# RunCarnivalDB – Relational + MongoDB Database Project
 
 A full-stack database project simulating the backend of a public running event system. It includes designing, building, and querying both **relational (Oracle SQL)** and **non-relational (MongoDB)** databases — all from scratch.
 
@@ -13,22 +13,26 @@ This project is split into two major phases:
 ## 🧱 Project Structure
 
 ```txt
-📦 RunMonashDB
+📦 Ocean odyssesy cruise database
 ├── ass1/                    # Phase 1: Cruise database design
-│   ├── oo_conceptual.pdf     # ERD in Crow's Foot notation
-│   ├── oo_normalised.pdf     # UNF → 1NF → 2NF → 3NF steps
-│   ├── oo_logical.pdf        # Logical schema (3NF)
-│   ├── oo_schema.sql         # Final schema (DDL)
-│   └── README.md             # Summary of design decisions
-│
-├── ass2/                    # Phase 2: RunMonash event system
-│   ├── T1-rm-schema.sql      # Create missing tables & constraints
-│   ├── T2-rm-insert.sql      # Populate test data for COMPETITOR, ENTRY, TEAM
-│   ├── T3-rm-dm.sql          # Transactions & DML logic
-│   ├── T4-rm-mods.sql        # Live database modifications
-│   ├── T5-rm-select.sql      # Advanced queries & reports
-│   ├── T6-rm-json.sql        # Export to JSON
-│   └── T6-rm-mongo.js        # MongoDB import & aggregation
+   ├── oo_assumptions.pdf        # List of assumptions made during design
+   ├── oo_conceptual.pdf         # Conceptual ERD (Crow’s Foot notation)
+   ├── oo_logical.pdf            # Logical schema (3NF)
+   ├── oo_model.zip              # Zipped model files (Lucidchart or SQL DDL)
+   ├── oo_normalisation.pdf      # UNF → 1NF → 2NF → 3NF steps
+   ├── oo_schema.sql             # SQL DDL script (CREATE TABLE, constraints)
+   ├── oo_schema_output.txt      # SQL execution log / output
+   └── oo_model/                 # Folder containing model support files
+
+├── ass2/                    # Phase 2: RunCarnival event system
+   ├── T1-rm-schema.sql           # Add missing tables and constraints
+   ├── T2-rm-insert.sql           # Insert test data into COMPETITOR, ENTRY, TEAM
+   ├── T3-rm-dm.sql               # DML: update, delete, transaction logic
+   ├── T4-rm-mods.sql             # Data modifications with commit/rollback
+   ├── T5-rm-select.sql           # Advanced SELECT queries and reporting
+   ├── T6-rm-json.sql             # Export SQL data to JSON format
+   ├── T6-rm-mongo.mongodb.js     # Import JSON into MongoDB and run aggregations
+   ├── rm-schema-insert.sql       # Initial base insert (e.g. student info)
 ```
 ---
 
